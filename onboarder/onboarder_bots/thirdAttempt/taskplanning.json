@@ -1,0 +1,59 @@
+[
+    {
+        "task_name": "Provide general information about Arklex AI and its services",
+        "steps": [
+            "FaissRAGWorker: Retrieve information frome Arklex AI website, blogs, and about page",
+            "MessageWorker: Write a response to the user's question based on the results from the FaissRAGWorker regarding Arklex AI, base your answer on the context provided by the FaissRAGWorker"
+        ]
+    },
+    {
+        "task_name": "Provide guidance on usage and functionality of the Arklex AI Agents Framework",
+        "steps": [
+            "MessageWorker: Welcome the new hire and ask if they have any specific questions about the Arklex AI Agents Framework or any particular functionality they need guidance on.",
+            "FaissRAGWorker: Retrieve relevant information from the company's documentation of the open source repo Agent-First-Organization to address the specific question or provide an overview of the Arklex AI Agents Framework if no specific question is given.",
+            "MessageWorker: Present the information obtained from the FaissRAGWorker to the new hire and ask if they need further clarification or assistance with this topic.",
+            "MessageWorker: Inquire if the new hire needs guidance on how to access additional resources, such as the GitHub repository or technical setup documentation. If they already indicated they need the GitHub repo it is https://github.com/arklexai/Agent-First-Organization.",
+            "MessageWorker: Provide instructions to access the requested resources or direct them to the relevant team members if they need personalized assistance with technical setup or other specific issues. If needed send them to the documentation url here https://arklexai.github.io/Agent-First-Organization/docs/intro."
+        ]
+    },
+    {
+        "task_name": "Answer technical questions related to the Arklex AI platform, tools, and technologies used",
+        "steps": [
+            "FaissRAGWorker: Find the most relevant sources pertaining to the specific user's needs possibly regarding building an agent (found in the tutorial parts of the documentation), setting up the configuration file (has its part in the documentation), learning about the types of workers (all available in the documentation), other tools or evaluating the agent (also available in the documentation). All the sources are available to the FaissRAGWorker under all the urls that start with https://arklexai.github.io/Agent-First-Organization/docs/ the rest of the url can help identify the most relevant sources for the user's query.",
+            "Utilize FaissRAGWorker to search the company's internal documentation under all sources that start with https://arklexai.github.io/Agent-First-Organization/docs/ the rest of the url should help identify the most relevant sources regarding the user's specifc question about a specific component of the arklex framework. Find the most relevant sources for answers to the user's technical questions.",
+            "Provide the retrieved information to the user via MessageWorker and ask if they need further clarification or additional details.",
+            "If the user's questions are not completely answered or they have new inquiries, use FaissRAGWorker again for additional detailed information.",
+            "Finalise by asking if the user requires guidance on using any Arklex tools or needs to be directed to other resources or team members for further assistance. If hesitant of the quality of the answers provide the url to the documentation here: https://arklexai.github.io/Agent-First-Organization/docs/intro"
+        ]
+    },
+    {
+        "task_name": "Provide information on Arklex team members and direct to relevant contacts for assistance",
+        "steps": [
+            "Ask the user if they need information on specific team members or understanding of roles within the Arklex team.",
+            "If the user seeks specific team member information, use FaissRAGWorker to retrieve details from internal documentation and provide relevant information to the user.",
+            "If the user is unsure or seeks guidance on who to contact for particular tasks or issues, ask them to specify their need or problem area.",
+            "Use FaissRAGWorker to find the appropriate team contact based on the user's specified need or problem area, and provide that contact information.",
+            "Confirm if the user needs any additional assistance or information on other team members or roles, and provide further help if required. Default to directing the user to Zhou Yu the founder at the email address zy2461@columbia.edu"
+        ]
+    },
+    {
+        "task_name": "Direct user to the correct technical resources, databases, and repositories such as GitHub",
+        "steps": [
+            "Ask the user to specify the technical resource they are looking for or the task they need assistance with, such as specific databases, repositories, or documentation.",
+            "Use FaissRAGWorker to retrieve information or links to the relevant technical resources or documentation from the company's internal resources. The main source of the documentation can be found under this url: https://arklexai.github.io/Agent-First-Organization/docs/intro, the github repo is this url: https://github.com/arklexai/Agent-First-Organization",
+            "Use MessageWorker to deliver the retrieved information or links to the user, ensuring the information is clear and understandable. Add the link to the repo: https://github.com/arklexai/Agent-First-Organization or the documentation: https://arklexai.github.io/Agent-First-Organization/docs/intro if necessary.",
+            "Ask the user if they need further assistance or if there are any additional resources or information they are looking for.",
+            "If further assistance is required, repeat previous steps or, if more specific guidance is needed, direct the user to a knowledgeable team member or additional support resource."
+        ]
+    },
+    {
+        "task_name": "Guide user through the onboarding process including setup and initial tasks",
+        "steps": [
+            "Welcome the new hire and provide an overview of the Arklex on-boarding process using MessageWorker. Introduce Arklex AI and its functions.",
+            "Use FaissRAGWorker to provide information from the company's internal documentation about the Arklex AI Agents Framework. The sources https://arklexai.github.io/Agent-First-Organization/docs/tutorials/customer-service and https://arklexai.github.io/Agent-First-Organization/docs/tutorials/booking-service can be the most helpful because they are tutorials on building a simply customer service agent or a booking agent, which help the new employee use the framework.",
+            "With MessageWorker, guide the new hire through the initial setup tasks, such as accessing the necessary resources and repositories. Encourage them to try building the customer service agent or booking agent from the tutorials in the documentation if they indicated that they still didn't try them. Also provide links to the tutorials on youtube: https://youtu.be/y1P2Ethvy0I",
+            "Direct the new hire to the appropriate resources or personnel for further assistance, using FaissRAGWorker to find specific internal documents if needed, usually they start with https://arklexai.github.io/Agent-First-Organization/docs/ the rest of the url can help you find the specific resource that is helpful to the new employee's specific question.",
+            "Follow up with the new hire, using MessageWorker to ensure they are getting comfortable with their new work environment and answer any outstanding questions."
+        ]
+    }
+]

@@ -1,0 +1,1020 @@
+{
+    "nodes": [
+        [
+            "0",
+            {
+                "resource": {
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "Hello and welcome to Arklex! I'm your On-boarding Assistant, here to help you get started. Whether you have questions about the Arklex AI Agents Framework, need guidance on technical resources, or want to connect with our team, I'm here to support you every step of the way. Let\u2019s make your transition as smooth as possible. How can I assist you today?",
+                    "task": "start message",
+                    "directed": false
+                },
+                "limit": 1,
+                "type": "start"
+            }
+        ],
+        [
+            "1",
+            {
+                "resource": {
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "Welcome to Arklex AI! I'm here to guide you through the onboarding process and help you get acquainted with our company and its offerings.",
+                    "task": "Welcome the new hire and introduce the purpose of the on-boarding assistant.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "2",
+            {
+                "resource": {
+                    "id": "9aa47724-0b77-4752-9528-cf4b06a46915",
+                    "name": "FaissRAGWorker"
+                },
+                "attribute": {
+                    "value": "Arklex AI is a cutting-edge company specializing in AI-driven solutions to optimize business processes. Here's a brief overview of our mission and core technologies.",
+                    "task": "Use the FaissRAGWorker to retrieve general information about Arklex AI from internal documentation and present it to the new hire.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "3",
+            {
+                "resource": {
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "Do you have any specific questions about Arklex AI or our framework that I can assist you with?",
+                    "task": "Ask the new hire if they have any specific questions about Arklex AI or its framework.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "4",
+            {
+                "resource": {
+                    "id": "9aa47724-0b77-4752-9528-cf4b06a46915",
+                    "name": "FaissRAGWorker"
+                },
+                "attribute": {
+                    "value": "Let me find that information for you. Here is what our documentation says about the Arklex AI framework regarding your question.",
+                    "task": "Use the FaissRAGWorker to answer any specific questions related to Arklex AI and its framework using internal documentation.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "5",
+            {
+                "resource": {
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "For more detailed resources or documentation, you can access our internal knowledge base at [link] or contact your team leader.",
+                    "task": "Provide instructions on where to find more detailed resources or documentation if needed.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "6",
+            {
+                "resource": {
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "Is there anything else I can assist you with, or do you have any more questions?",
+                    "task": "Conclude the interaction by checking if the new hire needs further assistance or has additional questions.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "7",
+            {
+                "resource": {
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "Welcome to the team! Let me provide you with a brief introduction to the Arklex AI Agents Framework.",
+                    "task": "Welcome the new hire and provide a brief introduction to the Arklex AI Agents Framework.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "8",
+            {
+                "resource": {
+                    "id": "9aa47724-0b77-4752-9528-cf4b06a46915",
+                    "name": "FaissRAGWorker"
+                },
+                "attribute": {
+                    "value": "",
+                    "task": "Use FaissRAGWorker to retrieve and provide an overview of the core components of the framework, including TaskGraph, Workers, and Tools.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "9",
+            {
+                "resource": {
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "Do you have any specific questions about the Arklex AI Agents Framework?",
+                    "task": "Ask the new hire if they have any specific questions about the Arklex AI Agents Framework.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "10",
+            {
+                "resource": {
+                    "id": "9aa47724-0b77-4752-9528-cf4b06a46915",
+                    "name": "FaissRAGWorker"
+                },
+                "attribute": {
+                    "value": "",
+                    "task": "If the user has questions, use FaissRAGWorker to retrieve detailed answers from the company's internal documentation.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "11",
+            {
+                "resource": {
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "You can find additional resources related to the framework in our GitHub repositories and setup guides.",
+                    "task": "Guide the new hire on where to find additional resources related to the framework, such as GitHub repositories and setup guides.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "12",
+            {
+                "resource": {
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "Let me introduce you to key members of our team and explain who to contact for specific issues or further assistance.",
+                    "task": "Introduce the new hire to key members of the team and explain who to contact for specific issues or further assistance.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "13",
+            {
+                "resource": {
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "Do you feel comfortable with the information provided, or do you need further assistance?",
+                    "task": "Confirm if the new hire feels comfortable with the information provided or needs further assistance.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "14",
+            {
+                "resource": {
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "Hello and welcome! Could you please let me know the specific technical issue or question you are experiencing with the Arklex AI platform?",
+                    "task": "Greet the new hire and inquire about the specific technical issue or question they are facing with the Arklex AI platform.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "15",
+            {
+                "resource": {
+                    "id": "9aa47724-0b77-4752-9528-cf4b06a46915",
+                    "name": "FaissRAGWorker"
+                },
+                "attribute": {
+                    "value": "",
+                    "task": "Use FaissRAGWorker to search the company's internal documentation to find relevant information or troubleshooting steps related to the issue described by the user.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "16",
+            {
+                "resource": {
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "Based on the information I found, here is a detailed explanation and solution to your issue: [Solution]. Please follow these steps and refer to the resources provided.",
+                    "task": "Provide a detailed explanation or solution to the user's issue using MessageWorker, including any necessary steps or resources they should consult.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "17",
+            {
+                "resource": {
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "Did the solution provided resolve your issue, or do you need further assistance?",
+                    "task": "Ask if the explanation or solution provided resolved the issue or if additional assistance is needed.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "18",
+            {
+                "resource": {
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "If the issue persists, please feel free to contact our support team at [Contact Details] or access additional resources at [Resources Link].",
+                    "task": "If the issue is unresolved, direct the user to relevant resources or suggest contacting specific team members using MessageWorker for further assistance.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "19",
+            {
+                "resource": {
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "Can you tell me more about the specific technical task you need help with?",
+                    "task": "Inquire about the specific technical task the new hire needs information or assistance with.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "20",
+            {
+                "resource": {
+                    "id": "9aa47724-0b77-4752-9528-cf4b06a46915",
+                    "name": "FaissRAGWorker"
+                },
+                "attribute": {
+                    "value": "",
+                    "task": "Use the FaissRAGWorker to search the company's internal documentation for relevant resources concerning the specified task.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "21",
+            {
+                "resource": {
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "Here are some resources that might help you with your task: [link1], [link2].",
+                    "task": "Provide links or summaries of the relevant resources to the new hire using the MessageWorker.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "22",
+            {
+                "resource": {
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "Do you need further assistance with any other technical tasks or resources?",
+                    "task": "Ask the new hire if they need further help with other technical tasks or resources.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "23",
+            {
+                "resource": {
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "Hello and welcome! Our goal is to help you connect with the team members for any assistance you might need.",
+                    "task": "Greet the new hire and explain that the goal is to help them connect with the team members and get further assistance.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "24",
+            {
+                "resource": {
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "Could you please let us know which specific area or technology you need assistance with?",
+                    "task": "Inquire about the specific area or technology they need assistance with to pair them with the appropriate team member.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "25",
+            {
+                "resource": {
+                    "id": "9aa47724-0b77-4752-9528-cf4b06a46915",
+                    "name": "FaissRAGWorker"
+                },
+                "attribute": {
+                    "value": "",
+                    "task": "Utilize the FaissRAGWorker to retrieve information about team members responsible for various areas or technologies, based on internal documentation.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "26",
+            {
+                "resource": {
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "Here is the contact information for the team member responsible for that area: [Contact Info] - they should be able to assist you further.",
+                    "task": "Provide the new hire with the contact information and roles of the relevant team member(s) who can assist with their specific needs.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "27",
+            {
+                "resource": {
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "Do you need any further introductions, or do you have any other questions about our team members and their roles?",
+                    "task": "Ask if the new hire requires further introductions or has other questions related to team members and their roles.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "28",
+            {
+                "resource": {
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "Are you satisfied with the information provided? Feel free to ask if you have any other onboarding-related questions or tasks you need help with.",
+                    "task": "Confirm if the new hire is satisfied with the information and offer to assist with any other onboarding-related questions or tasks.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ]
+    ],
+    "edges": [
+        [
+            "0",
+            "1",
+            {
+                "intent": "User wants to learn about Arklex AI and company information",
+                "attribute": {
+                    "weight": 1,
+                    "pred": true,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "1",
+            "2",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "2",
+            "3",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "3",
+            "4",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "4",
+            "5",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "5",
+            "6",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "0",
+            "7",
+            {
+                "intent": "User wants to understand how to use the Arklex AI Agents Framework",
+                "attribute": {
+                    "weight": 1,
+                    "pred": true,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "7",
+            "8",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "8",
+            "9",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "9",
+            "10",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "10",
+            "11",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "11",
+            "12",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "12",
+            "13",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "0",
+            "14",
+            {
+                "intent": "User has technical questions regarding setting up or using the Arklex AI platform",
+                "attribute": {
+                    "weight": 1,
+                    "pred": true,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "14",
+            "15",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "15",
+            "16",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "16",
+            "17",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "17",
+            "18",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "0",
+            "19",
+            {
+                "intent": "User needs help navigating internal resources for technical tasks",
+                "attribute": {
+                    "weight": 1,
+                    "pred": true,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "19",
+            "20",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "20",
+            "21",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "21",
+            "22",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "0",
+            "23",
+            {
+                "intent": "User wants to meet and connect with Arklex team members",
+                "attribute": {
+                    "weight": 1,
+                    "pred": true,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "23",
+            "24",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "24",
+            "25",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "25",
+            "26",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "26",
+            "27",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "27",
+            "28",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ]
+    ],
+    "role": "on\u2011boarding assistant",
+    "user_objective": "Help new Arklex technical hires answer questions, familiarize with Arklex AI Agents Framework, and get comfortable with their new work environment. Provides general information about Arklex AI, provides guidance for questions related to using the Arklex AI Agents Framework to build and create agents, helps direct new hire to correct resources for technical tasks including GitHub repo or setup, and familiarizes the new employee with members of the Arklex team and directs them to correct people for further assitance.",
+    "builder_objective": "The on-boarding assistant helps to record progress and familiarity of the new hire with Arklex AI in the progress database.",
+    "domain": "AI Agent Framework\u00a0Engineerin",
+    "intro": "Arklex\u202fAI builds an open\u2011source and enterprise agent\u2011orchestration platform focused on mixed\u2011control, TaskGraph\u2011based decision flows, and continual learning. The engineering team works mainly in Python (3.10+), TaskGraph, Kubernetes, and GitHub Actions.",
+    "task_docs": [
+        {
+            "source": "https://www.arklex.ai/",
+            "num": 5
+        },
+        {
+            "source": "https://arklexai.github.io/Agent-First-Organization/docs/intro",
+            "num": 5
+        },
+        {
+            "source": "https://arklexai.github.io/Agent-First-Organization/docs/tutorials/intro",
+            "num": 5
+        },
+        {
+            "source": "https://arklexai.github.io/Agent-First-Organization/docs/tutorials/customer-service",
+            "num": 5
+        },
+        {
+            "source": "https://arklexai.github.io/Agent-First-Organization/docs/tutorials/booking-service",
+            "num": 5
+        },
+        {
+            "source": "https://arklexai.github.io/Agent-First-Organization/docs/Config/intro",
+            "num": 5
+        },
+        {
+            "source": "https://arklexai.github.io/Agent-First-Organization/docs/Config/ChatModels",
+            "num": 5
+        },
+        {
+            "source": "https://arklexai.github.io/Agent-First-Organization/docs/Taskgraph/intro",
+            "num": 5
+        },
+        {
+            "source": "https://arklexai.github.io/Agent-First-Organization/docs/Taskgraph/Generation",
+            "num": 5
+        },
+        {
+            "source": "https://arklexai.github.io/Agent-First-Organization/docs/MessageState",
+            "num": 5
+        },
+        {
+            "source": "https://arklexai.github.io/Agent-First-Organization/docs/Workers/intro",
+            "num": 5
+        },
+        {
+            "source": "https://arklexai.github.io/Agent-First-Organization/docs/Workers",
+            "num": 5
+        },
+        {
+            "source": "https://arklexai.github.io/Agent-First-Organization/docs/Workers/MessageWorker",
+            "num": 5
+        },
+        {
+            "source": "https://arklexai.github.io/Agent-First-Organization/docs/Workers/RAGWorker",
+            "num": 5
+        },
+        {
+            "source": "https://arklexai.github.io/Agent-First-Organization/docs/Workers/DatabaseWorker",
+            "num": 5
+        },
+        {
+            "source": "https://arklexai.github.io/Agent-First-Organization/docs/Workers/SearchWorker",
+            "num": 5
+        },
+        {
+            "source": "https://arklexai.github.io/Agent-First-Organization/docs/Workers/DefaultWorker",
+            "num": 5
+        },
+        {
+            "source": "https://arklexai.github.io/Agent-First-Organization/docs/Tools",
+            "num": 5
+        },
+        {
+            "source": "https://arklexai.github.io/Agent-First-Organization/docs/Integration/intro",
+            "num": 5
+        },
+        {
+            "source": "https://arklexai.github.io/Agent-First-Organization/docs/Integration/Hubspot",
+            "num": 5
+        },
+        {
+            "source": "https://arklexai.github.io/Agent-First-Organization/docs/Evaluation/intro",
+            "num": 5
+        },
+        {
+            "source": "https://arklexai.github.io/Agent-First-Organization/docs/Evaluation/UserSimulator",
+            "num": 5
+        },
+        {
+            "source": "https://arklexai.github.io/Agent-First-Organization/docs/Evaluation/Metrics",
+            "num": 5
+        }
+    ],
+    "rag_docs": [
+        {
+            "source": "https://www.arklex.ai/",
+            "num": 5
+        },
+        {
+            "source": "https://arklexai.github.io/Agent-First-Organization/docs/intro",
+            "num": 5
+        },
+        {
+            "source": "https://arklexai.github.io/Agent-First-Organization/docs/tutorials/intro",
+            "num": 5
+        },
+        {
+            "source": "https://arklexai.github.io/Agent-First-Organization/docs/tutorials/customer-service",
+            "num": 5
+        },
+        {
+            "source": "https://arklexai.github.io/Agent-First-Organization/docs/tutorials/booking-service",
+            "num": 5
+        },
+        {
+            "source": "https://arklexai.github.io/Agent-First-Organization/docs/Config/intro",
+            "num": 5
+        },
+        {
+            "source": "https://arklexai.github.io/Agent-First-Organization/docs/Config/ChatModels",
+            "num": 5
+        },
+        {
+            "source": "https://arklexai.github.io/Agent-First-Organization/docs/Taskgraph/intro",
+            "num": 5
+        },
+        {
+            "source": "https://arklexai.github.io/Agent-First-Organization/docs/Taskgraph/Generation",
+            "num": 5
+        },
+        {
+            "source": "https://arklexai.github.io/Agent-First-Organization/docs/MessageState",
+            "num": 5
+        },
+        {
+            "source": "https://arklexai.github.io/Agent-First-Organization/docs/Workers/intro",
+            "num": 5
+        },
+        {
+            "source": "https://arklexai.github.io/Agent-First-Organization/docs/Workers",
+            "num": 5
+        },
+        {
+            "source": "https://arklexai.github.io/Agent-First-Organization/docs/Workers/MessageWorker",
+            "num": 5
+        },
+        {
+            "source": "https://arklexai.github.io/Agent-First-Organization/docs/Workers/RAGWorker",
+            "num": 5
+        },
+        {
+            "source": "https://arklexai.github.io/Agent-First-Organization/docs/Workers/DatabaseWorker",
+            "num": 5
+        },
+        {
+            "source": "https://arklexai.github.io/Agent-First-Organization/docs/Workers/SearchWorker",
+            "num": 5
+        },
+        {
+            "source": "https://arklexai.github.io/Agent-First-Organization/docs/Workers/DefaultWorker",
+            "num": 5
+        },
+        {
+            "source": "https://arklexai.github.io/Agent-First-Organization/docs/Tools",
+            "num": 5
+        },
+        {
+            "source": "https://arklexai.github.io/Agent-First-Organization/docs/Integration/intro",
+            "num": 5
+        },
+        {
+            "source": "https://arklexai.github.io/Agent-First-Organization/docs/Integration/Hubspot",
+            "num": 5
+        },
+        {
+            "source": "https://arklexai.github.io/Agent-First-Organization/docs/Evaluation/intro",
+            "num": 5
+        },
+        {
+            "source": "https://arklexai.github.io/Agent-First-Organization/docs/Evaluation/UserSimulator",
+            "num": 5
+        },
+        {
+            "source": "https://arklexai.github.io/Agent-First-Organization/docs/Evaluation/Metrics",
+            "num": 5
+        }
+    ],
+    "tasks": [],
+    "workers": [
+        {
+            "id": "9aa47724-0b77-4752-9528-cf4b06a46915",
+            "name": "FaissRAGWorker",
+            "path": "faiss_rag_worker.py"
+        },
+        {
+            "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+            "name": "MessageWorker",
+            "path": "message_worker.py"
+        },
+        {
+            "id": "9c15af81-04b3-443e-be04-a3522124b905",
+            "name": "SearchWorker",
+            "path": "search_worker.py"
+        }
+    ],
+    "tools": [],
+    "nluapi": "",
+    "slotfillapi": ""
+}

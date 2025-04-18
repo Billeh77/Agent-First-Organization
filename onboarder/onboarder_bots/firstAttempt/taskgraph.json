@@ -1,0 +1,424 @@
+{
+    "nodes": [
+        [
+            "0",
+            {
+                "resource": {
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "Welcome to Arklex! I'm your On\u2011boarding Assistant, here to help you settle in and get comfortable with our work environment. Whether you have questions about using the Arklex AI Agents Framework, need guidance on technical tasks, or want to learn more about our team, I'm here to assist. Let's make your start at Arklex smooth and enjoyable. How can I assist you today?",
+                    "task": "start message",
+                    "directed": false
+                },
+                "limit": 1,
+                "type": "start"
+            }
+        ],
+        [
+            "1",
+            {
+                "resource": {
+                    "id": "9aa47724-0b77-4752-9528-cf4b06a46915",
+                    "name": "FaissRAGWorker"
+                },
+                "attribute": {
+                    "value": "Arklex AI is designed to assist users by leveraging advanced AI technologies. It can provide a wide range of services including but not limited to information retrieval, user assistance, and task automation.",
+                    "task": "Provide general information about Arklex AI",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "2",
+            {
+                "resource": {
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "Do you have any specific questions about using the Arklex AI Agents Framework?",
+                    "task": "Inquire if the new hire has any specific questions about using the Arklex AI Agents Framework.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "3",
+            {
+                "resource": {
+                    "id": "9aa47724-0b77-4752-9528-cf4b06a46915",
+                    "name": "FaissRAGWorker"
+                },
+                "attribute": {
+                    "value": "",
+                    "task": "Utilize the FaissRAGWorker to provide answers from the company's internal documentations related to the Arklex AI Agents Framework.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "4",
+            {
+                "resource": {
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "Do you need further clarification or have any additional questions?",
+                    "task": "Ask the new hire if they need further clarification or have additional questions.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "5",
+            {
+                "resource": {
+                    "id": "9aa47724-0b77-4752-9528-cf4b06a46915",
+                    "name": "FaissRAGWorker"
+                },
+                "attribute": {
+                    "value": "",
+                    "task": "Provide further information or direct the new hire to relevant resources if needed, using the FaissRAGWorker to support the information provided.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "6",
+            {
+                "resource": {
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "Do you feel comfortable with the information provided, or do you need help on another topic?",
+                    "task": "Confirm if the new hire feels comfortable with the information provided or needs help on another topic.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "7",
+            {
+                "resource": {
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "What specific technical resource or setup guide are you looking for within the Arklex AI Agents Framework?",
+                    "task": "Inquire about the specific technical resource or setup guide the user is looking for within the Arklex AI Agents Framework.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "8",
+            {
+                "resource": {
+                    "id": "9aa47724-0b77-4752-9528-cf4b06a46915",
+                    "name": "FaissRAGWorker"
+                },
+                "attribute": {
+                    "value": "",
+                    "task": "Use the FaissRAGWorker to search internal documentation for relevant resources, such as GitHub repos or setup guides, based on the user's inquiry.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "9",
+            {
+                "resource": {
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "Here are some resources that match your inquiry: [list of resources].",
+                    "task": "Present the retrieved resources to the user and provide a brief description of each.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "10",
+            {
+                "resource": {
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "Do you need further detailed information or have any other questions regarding additional resources?",
+                    "task": "Ask if the user needs further detailed information or if they have other questions regarding additional resources.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "11",
+            {
+                "resource": {
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "If you need further assistance, please contact our support team. Are you satisfied with the resources provided?",
+                    "task": "Direct the user to contact relevant team members for further assistance if needed, or confirm if the user is satisfied with the provided resources.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "12",
+            {
+                "resource": {
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "Welcome to Arklex! Let me introduce you to our team members who can assist you further. Please let us know if you have any specific questions or need assistance with anything.",
+                    "task": "Introduce user to members of the Arklex team and guide on seeking further assistance",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "13",
+            {
+                "resource": {
+                    "id": "9aa47724-0b77-4752-9528-cf4b06a46915",
+                    "name": "FaissRAGWorker"
+                },
+                "attribute": {
+                    "value": "Our company is dedicated to innovation and excellence, with a mission to improve lives through our advanced solutions. Our core functions focus on delivering the highest quality products and excellent customer service to ensure satisfaction.",
+                    "task": "Provide insights into the company\u2019s mission, objectives, and core functions",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ]
+    ],
+    "edges": [
+        [
+            "0",
+            "1",
+            {
+                "intent": "User has general questions about Arklex AI",
+                "attribute": {
+                    "weight": 1,
+                    "pred": true,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "0",
+            "2",
+            {
+                "intent": "User needs help with Arklex AI Agent Framework",
+                "attribute": {
+                    "weight": 1,
+                    "pred": true,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "2",
+            "3",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "3",
+            "4",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "4",
+            "5",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "5",
+            "6",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "0",
+            "7",
+            {
+                "intent": "User is looking for resources for technical tasks",
+                "attribute": {
+                    "weight": 1,
+                    "pred": true,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "7",
+            "8",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "8",
+            "9",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "9",
+            "10",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "10",
+            "11",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "0",
+            "12",
+            {
+                "intent": "User wants to become familiar with Arklex team members",
+                "attribute": {
+                    "weight": 1,
+                    "pred": true,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "0",
+            "13",
+            {
+                "intent": "User wants to understand the company's mission and objectives",
+                "attribute": {
+                    "weight": 1,
+                    "pred": true,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ]
+    ],
+    "role": "on\u2011boarding assistant",
+    "user_objective": "Help new Arklex technical hires answer questions, familiarize with Arklex AI Agents Framework, and get comfortable with their new work environment. Provides general information about Arklex AI, provides guidance for questions related to using the Arklex AI Agents Framework to build and create agents, helps direct new hire to correct resources for technical tasks including GitHub repo or setup, and familiarizes the new employee with members of the Arklex team and directs them to correct people for further assitance.",
+    "builder_objective": "The on-boarding assistant helps to record progress and familiarity of the new hire with Arklex AI in the progress database.",
+    "domain": "AI Agent Framework\u00a0Engineerin",
+    "intro": "Arklex\u202fAI builds an open\u2011source and enterprise agent\u2011orchestration platform focused on mixed\u2011control, TaskGraph\u2011based decision flows, and continual learning. The engineering team works mainly in Python (3.10+), TaskGraph, Kubernetes, and GitHub Actions.",
+    "task_docs": [
+        {
+            "source": "https://www.arklex.ai/",
+            "num": 20
+        }
+    ],
+    "rag_docs": [
+        {
+            "source": "https://arklexai.github.io/Agent-First-Organization/docs/",
+            "num": 20
+        }
+    ],
+    "tasks": [],
+    "workers": [
+        {
+            "id": "9aa47724-0b77-4752-9528-cf4b06a46915",
+            "name": "FaissRAGWorker",
+            "path": "faiss_rag_worker.py"
+        },
+        {
+            "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+            "name": "MessageWorker",
+            "path": "message_worker.py"
+        },
+        {
+            "id": "9c15af81-04b3-443e-be04-a3522124b905",
+            "name": "SearchWorker",
+            "path": "search_worker.py"
+        }
+    ],
+    "tools": [],
+    "nluapi": "",
+    "slotfillapi": ""
+}

@@ -1,0 +1,40 @@
+[
+    {
+        "task_name": "Provide general information about Arklex AI",
+        "steps": [
+            "Provide general information about Arklex AI"
+        ]
+    },
+    {
+        "task_name": "Offer guidance on using the Arklex AI Agents Framework",
+        "steps": [
+            "Inquire if the new hire has any specific questions about using the Arklex AI Agents Framework.",
+            "Utilize the FaissRAGWorker to provide answers from the company's internal documentations related to the Arklex AI Agents Framework.",
+            "Ask the new hire if they need further clarification or have additional questions.",
+            "Provide further information or direct the new hire to relevant resources if needed, using the FaissRAGWorker to support the information provided.",
+            "Confirm if the new hire feels comfortable with the information provided or needs help on another topic."
+        ]
+    },
+    {
+        "task_name": "Assist in directing the user to the appropriate technical resources, such as GitHub repos or setup guides",
+        "steps": [
+            "Inquire about the specific technical resource or setup guide the user is looking for within the Arklex AI Agents Framework.",
+            "Use the FaissRAGWorker to search internal documentation for relevant resources, such as GitHub repos or setup guides, based on the user's inquiry.",
+            "Present the retrieved resources to the user and provide a brief description of each.",
+            "Ask if the user needs further detailed information or if they have other questions regarding additional resources.",
+            "Direct the user to contact relevant team members for further assistance if needed, or confirm if the user is satisfied with the provided resources."
+        ]
+    },
+    {
+        "task_name": "Introduce user to members of the Arklex team and guide on seeking further assistance",
+        "steps": [
+            "Introduce user to members of the Arklex team and guide on seeking further assistance"
+        ]
+    },
+    {
+        "task_name": "Provide insights into the company\u2019s mission, objectives, and core functions",
+        "steps": [
+            "Provide insights into the company\u2019s mission, objectives, and core functions"
+        ]
+    }
+]

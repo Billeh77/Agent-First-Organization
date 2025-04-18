@@ -1,0 +1,200 @@
+{
+    "role": "on‑boarding assistant",
+    "user_objective": "Help new Arklex technical hires answer questions, familiarize with Arklex AI Agents Framework, and get comfortable with their new work environment. Provides general information about Arklex AI, provides guidance for questions related to using the Arklex AI Agents Framework to build and create agents, helps direct new hire to correct resources for technical tasks including GitHub repo or setup, and familiarizes the new employee with members of the Arklex team and directs them to correct people for further assitance.",
+    "builder_objective": "The on-boarding assistant helps to record progress and familiarity of the new hire with Arklex AI in the progress database.",
+    "domain": "AI Agent Framework Engineerin",
+    "intro": "Arklex AI builds an open‑source and enterprise agent‑orchestration platform focused on mixed‑control, TaskGraph‑based decision flows, and continual learning. The engineering team works mainly in Python (3.10+), TaskGraph, Kubernetes, and GitHub Actions.",
+    "task_docs": [{
+        "source": "https://www.arklex.ai/",
+        "desc": "Arklex's landing page provides a high-level overview of the company's mission, core AI capabilities, differentiating features, and enterprise value. It helps new hires understand Arklex's vision, product offering, customer base, and strategic positioning. Useful for answering general company questions, explaining business objectives, or introducing Arklex to non-technical stakeholders.",
+        "num": 20
+    }, {
+        "source": "https://arklexai.github.io/Agent-First-Organization/docs/intro",
+        "desc": "This introduction outlines the core philosophy behind the Arklex AI Agent Framework. It explains how Arklex bridges the gap between rigid rule-based systems and unpredictable autonomous agents by integrating Task Graphs, Mixed-Control logic, and continual learning. This page is essential for new technical hires to understand the 'why' behind Arklex—its goals, architectural vision, and competitive advantages—and serves as a foundational resource for onboarding into the framework.",
+        "num": 1
+    }, {
+        "source": "https://arklexai.github.io/Agent-First-Organization/docs/tutorials/intro",
+        "desc": "This tutorials overview introduces hands-on examples of how to use the Arklex AI Agent Framework in real-world applications. It links to practical walkthroughs like the Customer Service Agent and Booking Service Bot, guiding new technical hires through step-by-step implementations of Retrieval-Augmented Generation (RAG) and database integration. This page helps new engineers explore how Arklex components work in context, offering an ideal starting point for learning through applied use cases.",
+        "num": 1
+    }, {
+        "source": "https://arklexai.github.io/Agent-First-Organization/docs/tutorials/customer-service",
+        "desc": "This tutorial provides a step-by-step guide to building a customer service agent using the Arklex Agent Framework. It introduces key concepts such as TaskGraph construction, RAG integration, and worker configuration, making it ideal for technical new hires to understand how to create agents from a config file and support real user interactions. Engineers can reference this page to learn how to supply knowledge sources, design workflows, and evaluate agent performance in production-like scenarios.",
+        "num": 1
+    }, {
+        "source": "https://arklexai.github.io/Agent-First-Organization/docs/tutorials/booking-service",
+        "desc": "This tutorial walks through building a booking assistant that integrates with real or mock databases using the Arklex DatabaseWorker. It teaches technical hires how to configure agents that can not only answer questions but also read from and write to databases—ideal for use cases like ticket reservations or scheduling. Engineers can use this page to learn how to structure config files for transactional agents and understand the execution flow from user input to database operations.",
+        "num": 1
+    }, {
+        "source": "https://arklexai.github.io/Agent-First-Organization/docs/Config/intro",
+        "desc": "This page provides the structure and purpose of the configuration (config) JSON file used to define an agent's behavior, knowledge sources, and components. New technical hires can use it as a reference to understand how to describe agent roles, objectives, documents, workers, and tools—ultimately enabling automated TaskGraph generation. This is a foundational page for learning how to customize and deploy agents efficiently within the Arklex framework.",
+        "num": 1
+    }, {
+        "source": "https://arklexai.github.io/Agent-First-Organization/docs/Config/ChatModels",
+        "desc": "This page outlines how to configure and use different LLM providers (OpenAI, Google Gemini, Anthropic, Hugging Face) within the Arklex framework for taskgraph generation and runtime. It provides usage examples, supported model lists, and API key setup instructions. New hires can refer to this page to understand model compatibility, select appropriate LLMs, and troubleshoot model setup when deploying agents with different backends.",
+        "num": 1
+    }, {
+        "source": "https://arklexai.github.io/Agent-First-Organization/docs/Taskgraph/intro",
+        "desc": "This page introduces the concept of TaskGraphs in the Arklex framework, explaining how complex agent behaviors are broken into structured nodes (tasks) and edges (execution paths). It helps new hires understand how agents coordinate multi-step workflows across workers and dynamically adapt to user input. Use this page to grasp the core structure and execution flow behind agent orchestration, and how real-world tasks are modeled within the system.",
+        "num": 1
+    }, {
+        "source": "https://arklexai.github.io/Agent-First-Organization/docs/Taskgraph/Generation",
+        "desc": "This page details the step-by-step process of converting a config file into an operational TaskGraph, including task decomposition, builder interaction, and worker assignment. New hires can use this page to understand how Arklex agents are programmatically structured, customized through an interactive planner, and mapped to specific workers. It is critical for learning how high-level objectives are translated into executable multi-step agent workflows.",
+        "num": 1
+    }, {
+        "source": "https://arklexai.github.io/Agent-First-Organization/docs/MessageState",
+        "desc": "This page defines the MessageState object, a structured representation of the conversation's current context passed between the orchestrator and workers. It outlines critical fields like user input, system instructions, node transitions, and slot-filling metadata. This page is essential for developers building or debugging workers, as it shows how context is carried and modified throughout TaskGraph execution.",
+        "num": 1
+    }, {
+        "source": "https://arklexai.github.io/Agent-First-Organization/docs/Workers/intro",
+        "desc": "This page introduces the concept of Workers—the modular execution units in the Arklex Agent First Organization framework responsible for handling tasks and subtasks. It explains how Workers operate using MessageState as input/output and how they can call other Workers recursively. This is a key page for technical hires looking to understand and implement custom task logic or extend the framework's capabilities.",
+        "num": 1
+    }, {
+        "source": "https://arklexai.github.io/Agent-First-Organization/docs/Workers",
+        "desc": "This page explains the foundational role of Workers in the Arklex framework. It introduces the BaseWorker class, outlines how Workers execute tasks using MessageState, and describes how they integrate into the TaskGraph as nodes or subgraphs via LangGraph. This page is essential for new hires aiming to develop, extend, or customize Workers to handle specific tasks during agent execution.",
+        "num": 1
+    }, {
+        "source": "https://arklexai.github.io/Agent-First-Organization/docs/Workers/MessageWorker",
+        "desc": "This page details the MessageWorker, the foundational component for handling chat responses in Arklex agents. It explains how MessageWorker uses LangGraph and LLMs to generate structured responses from system and user context via MessageState. New hires should reference this to understand the response flow, node structure, and prompt generation logic that powers the agent's conversational outputs.",
+        "num": 1
+    }, {
+        "source": "https://arklexai.github.io/Agent-First-Organization/docs/Workers/RAGWorker",
+        "desc": "This page introduces RAGWorker, a key component in enabling Retrieval Augmented Generation for Arklex agents. It explains how the RAGWorker retrieves contextually relevant information using FAISS and composes responses by integrating this data with LLMs. Technical hires should use this page to understand how internal documents are accessed, how the retrieval pipeline is structured via LangGraph nodes, and how context-aware answers are generated dynamically from indexed sources.",
+        "num": 1
+    }, {
+        "source": "https://arklexai.github.io/Agent-First-Organization/docs/Workers/DatabaseWorker",
+        "desc": "This page details the implementation of the DatabaseWorker, a specialized component for executing dynamic, database-driven tasks such as searching, booking, and canceling records. Using a sample show booking system, it illustrates how to design and populate relational schemas (e.g., shows, users, bookings) and integrate database operations into the agent flow via slot filling and task-mapped actions. New hires can refer to this guide to understand how to build agents that interact with SQL-based systems and respond based on real-time data.",
+        "num": 1
+    }, {
+        "source": "https://arklexai.github.io/Agent-First-Organization/docs/Workers/SearchWorker",
+        "desc": "This page explains the implementation and function of SearchWorker, a component designed to fetch real-time web data using Tavily’s search API. Unlike RAGWorker, which retrieves from local documents, SearchWorker converts user prompts into independent queries and pulls current information from the internet before composing a response. It’s essential for building agents that answer time-sensitive or non-documented questions. Technical hires can use this to understand how to integrate live web search into agent workflows.",
+        "num": 1
+    }, {
+        "source": "https://arklexai.github.io/Agent-First-Organization/docs/Workers/DefaultWorker",
+        "desc": "This page describes the DefaultWorker, a fallback worker used when no other worker is matched during TaskGraph generation. It dynamically selects the most appropriate worker at runtime by leveraging an LLM to compare the task description against available workers' capabilities. New engineering hires can learn how the DefaultWorker provides flexibility and resilience by ensuring that every query has a valid execution path, even if no explicit match is found during planning.",
+        "num": 1
+    }, {
+        "source": "https://arklexai.github.io/Agent-First-Organization/docs/Tools",
+        "desc": "This page introduces Tools, which are lightweight, flexible task execution units used in Arklex's agent framework. Unlike Workers, Tools operate with simple input/output parameters and are powered by slot-filling for data extraction from conversations. New engineers can use this page to learn how to define, register, and structure custom API functions or utility logic as Tools using the @register_tool decorator. It also explains how to set slot parameters, expected outputs, and completion logic to seamlessly integrate Tools into TaskGraphs.",
+        "num": 1
+    }, {
+        "source": "https://arklexai.github.io/Agent-First-Organization/docs/Integration/intro",
+        "desc": "This page introduces integration capabilities within the Arklex Agent Framework, focusing on how agents can be connected to third-party systems like CRMs or external APIs. While currently highlighting HubSpot as a case study, the page sets the foundation for teaching new technical hires how to wire tools and workers into real business ecosystems. It demonstrates how to extend agent functionality beyond internal logic by embedding API-based services and provides an entry point for building custom integrations.",
+        "num": 1
+    }, {
+        "source": "https://arklexai.github.io/Agent-First-Organization/docs/Integration/Hubspot",
+        "desc": "This page details how to integrate HubSpot with the Arklex Agent Framework to enable CRM-based functionality like user identification, ticket creation, and meeting scheduling. It guides new technical hires through authenticating with the HubSpot API, configuring access scopes, and implementing tools that allow agents to retrieve contact data, log conversations, create tickets, and manage meeting availability. This resource is crucial for onboarding engineers tasked with building agents that interact with real customer data or handle enterprise workflows.",
+        "num": 1
+    }, {
+        "source": "https://arklexai.github.io/Agent-First-Organization/docs/Evaluation/intro",
+        "desc": "This page introduces the evaluation pipeline for task-oriented dialogue agents built with the Arklex framework. It walks technical hires through generating synthetic conversations, launching a local model API, and analyzing goal completion using configurable parameters like task count and max turns. This page is essential for validating agent performance, extracting metrics, and ensuring that new agents align with user objectives and expected behavior before deployment.",
+        "num": 1
+    }, {
+        "source": "https://arklexai.github.io/Agent-First-Organization/docs/Evaluation/UserSimulator",
+        "desc": "This page explains how to simulate user interactions for evaluating agent performance using a two-pass testing framework. It guides engineers through configuring parameters such as number of conversations, goals, and turn limits to assess goal completion and NLU accuracy. Useful for stress-testing bots under various scenarios and validating how well an agent satisfies user and builder objectives based on the config or TaskGraph.",
+        "num": 1
+    }, {
+        "source": "https://arklexai.github.io/Agent-First-Organization/docs/Evaluation/Metrics",
+        "desc": "This page outlines the evaluation metrics used to measure chatbot performance after simulation. It details three key indicators: user's goal completion rate (success rate), user's goal completion efficiency (average turns taken), and bot's goal completion rate (builder-defined success). Helps technical hires interpret simulation results and understand trade-offs between success and efficiency when optimizing TaskGraph flows or tuning agent behaviors.",
+        "num": 1
+    }],
+    "rag_docs": [{
+        "source": "https://www.arklex.ai/",
+        "desc": "Arklex's landing page provides a high-level overview of the company's mission, core AI capabilities, differentiating features, and enterprise value. It helps new hires understand Arklex's vision, product offering, customer base, and strategic positioning. Useful for answering general company questions, explaining business objectives, or introducing Arklex to non-technical stakeholders.",
+        "num": 20
+    }, {
+        "source": "https://arklexai.github.io/Agent-First-Organization/docs/intro",
+        "desc": "This introduction outlines the core philosophy behind the Arklex AI Agent Framework. It explains how Arklex bridges the gap between rigid rule-based systems and unpredictable autonomous agents by integrating Task Graphs, Mixed-Control logic, and continual learning. This page is essential for new technical hires to understand the 'why' behind Arklex—its goals, architectural vision, and competitive advantages—and serves as a foundational resource for onboarding into the framework.",
+        "num": 1
+    }, {
+        "source": "https://arklexai.github.io/Agent-First-Organization/docs/tutorials/intro",
+        "desc": "This tutorials overview introduces hands-on examples of how to use the Arklex AI Agent Framework in real-world applications. It links to practical walkthroughs like the Customer Service Agent and Booking Service Bot, guiding new technical hires through step-by-step implementations of Retrieval-Augmented Generation (RAG) and database integration. This page helps new engineers explore how Arklex components work in context, offering an ideal starting point for learning through applied use cases.",
+        "num": 1
+    }, {
+        "source": "https://arklexai.github.io/Agent-First-Organization/docs/tutorials/customer-service",
+        "desc": "This tutorial provides a step-by-step guide to building a customer service agent using the Arklex Agent Framework. It introduces key concepts such as TaskGraph construction, RAG integration, and worker configuration, making it ideal for technical new hires to understand how to create agents from a config file and support real user interactions. Engineers can reference this page to learn how to supply knowledge sources, design workflows, and evaluate agent performance in production-like scenarios.",
+        "num": 1
+    }, {
+        "source": "https://arklexai.github.io/Agent-First-Organization/docs/tutorials/booking-service",
+        "desc": "This tutorial walks through building a booking assistant that integrates with real or mock databases using the Arklex DatabaseWorker. It teaches technical hires how to configure agents that can not only answer questions but also read from and write to databases—ideal for use cases like ticket reservations or scheduling. Engineers can use this page to learn how to structure config files for transactional agents and understand the execution flow from user input to database operations.",
+        "num": 1
+    }, {
+        "source": "https://arklexai.github.io/Agent-First-Organization/docs/Config/intro",
+        "desc": "This page provides the structure and purpose of the configuration (config) JSON file used to define an agent's behavior, knowledge sources, and components. New technical hires can use it as a reference to understand how to describe agent roles, objectives, documents, workers, and tools—ultimately enabling automated TaskGraph generation. This is a foundational page for learning how to customize and deploy agents efficiently within the Arklex framework.",
+        "num": 1
+    }, {
+        "source": "https://arklexai.github.io/Agent-First-Organization/docs/Config/ChatModels",
+        "desc": "This page outlines how to configure and use different LLM providers (OpenAI, Google Gemini, Anthropic, Hugging Face) within the Arklex framework for taskgraph generation and runtime. It provides usage examples, supported model lists, and API key setup instructions. New hires can refer to this page to understand model compatibility, select appropriate LLMs, and troubleshoot model setup when deploying agents with different backends.",
+        "num": 1
+    }, {
+        "source": "https://arklexai.github.io/Agent-First-Organization/docs/Taskgraph/intro",
+        "desc": "This page introduces the concept of TaskGraphs in the Arklex framework, explaining how complex agent behaviors are broken into structured nodes (tasks) and edges (execution paths). It helps new hires understand how agents coordinate multi-step workflows across workers and dynamically adapt to user input. Use this page to grasp the core structure and execution flow behind agent orchestration, and how real-world tasks are modeled within the system.",
+        "num": 1
+    }, {
+        "source": "https://arklexai.github.io/Agent-First-Organization/docs/Taskgraph/Generation",
+        "desc": "This page details the step-by-step process of converting a config file into an operational TaskGraph, including task decomposition, builder interaction, and worker assignment. New hires can use this page to understand how Arklex agents are programmatically structured, customized through an interactive planner, and mapped to specific workers. It is critical for learning how high-level objectives are translated into executable multi-step agent workflows.",
+        "num": 1
+    }, {
+        "source": "https://arklexai.github.io/Agent-First-Organization/docs/MessageState",
+        "desc": "This page defines the MessageState object, a structured representation of the conversation's current context passed between the orchestrator and workers. It outlines critical fields like user input, system instructions, node transitions, and slot-filling metadata. This page is essential for developers building or debugging workers, as it shows how context is carried and modified throughout TaskGraph execution.",
+        "num": 1
+    }, {
+        "source": "https://arklexai.github.io/Agent-First-Organization/docs/Workers/intro",
+        "desc": "This page introduces the concept of Workers—the modular execution units in the Arklex Agent First Organization framework responsible for handling tasks and subtasks. It explains how Workers operate using MessageState as input/output and how they can call other Workers recursively. This is a key page for technical hires looking to understand and implement custom task logic or extend the framework's capabilities.",
+        "num": 1
+    }, {
+        "source": "https://arklexai.github.io/Agent-First-Organization/docs/Workers",
+        "desc": "This page explains the foundational role of Workers in the Arklex framework. It introduces the BaseWorker class, outlines how Workers execute tasks using MessageState, and describes how they integrate into the TaskGraph as nodes or subgraphs via LangGraph. This page is essential for new hires aiming to develop, extend, or customize Workers to handle specific tasks during agent execution.",
+        "num": 1
+    }, {
+        "source": "https://arklexai.github.io/Agent-First-Organization/docs/Workers/MessageWorker",
+        "desc": "This page details the MessageWorker, the foundational component for handling chat responses in Arklex agents. It explains how MessageWorker uses LangGraph and LLMs to generate structured responses from system and user context via MessageState. New hires should reference this to understand the response flow, node structure, and prompt generation logic that powers the agent's conversational outputs.",
+        "num": 1
+    }, {
+        "source": "https://arklexai.github.io/Agent-First-Organization/docs/Workers/RAGWorker",
+        "desc": "This page introduces RAGWorker, a key component in enabling Retrieval Augmented Generation for Arklex agents. It explains how the RAGWorker retrieves contextually relevant information using FAISS and composes responses by integrating this data with LLMs. Technical hires should use this page to understand how internal documents are accessed, how the retrieval pipeline is structured via LangGraph nodes, and how context-aware answers are generated dynamically from indexed sources.",
+        "num": 1
+    }, {
+        "source": "https://arklexai.github.io/Agent-First-Organization/docs/Workers/DatabaseWorker",
+        "desc": "This page details the implementation of the DatabaseWorker, a specialized component for executing dynamic, database-driven tasks such as searching, booking, and canceling records. Using a sample show booking system, it illustrates how to design and populate relational schemas (e.g., shows, users, bookings) and integrate database operations into the agent flow via slot filling and task-mapped actions. New hires can refer to this guide to understand how to build agents that interact with SQL-based systems and respond based on real-time data.",
+        "num": 1
+    }, {
+        "source": "https://arklexai.github.io/Agent-First-Organization/docs/Workers/SearchWorker",
+        "desc": "This page explains the implementation and function of SearchWorker, a component designed to fetch real-time web data using Tavily’s search API. Unlike RAGWorker, which retrieves from local documents, SearchWorker converts user prompts into independent queries and pulls current information from the internet before composing a response. It’s essential for building agents that answer time-sensitive or non-documented questions. Technical hires can use this to understand how to integrate live web search into agent workflows.",
+        "num": 1
+    }, {
+        "source": "https://arklexai.github.io/Agent-First-Organization/docs/Workers/DefaultWorker",
+        "desc": "This page describes the DefaultWorker, a fallback worker used when no other worker is matched during TaskGraph generation. It dynamically selects the most appropriate worker at runtime by leveraging an LLM to compare the task description against available workers' capabilities. New engineering hires can learn how the DefaultWorker provides flexibility and resilience by ensuring that every query has a valid execution path, even if no explicit match is found during planning.",
+        "num": 1
+    }, {
+        "source": "https://arklexai.github.io/Agent-First-Organization/docs/Tools",
+        "desc": "This page introduces Tools, which are lightweight, flexible task execution units used in Arklex's agent framework. Unlike Workers, Tools operate with simple input/output parameters and are powered by slot-filling for data extraction from conversations. New engineers can use this page to learn how to define, register, and structure custom API functions or utility logic as Tools using the @register_tool decorator. It also explains how to set slot parameters, expected outputs, and completion logic to seamlessly integrate Tools into TaskGraphs.",
+        "num": 1
+    }, {
+        "source": "https://arklexai.github.io/Agent-First-Organization/docs/Integration/intro",
+        "desc": "This page introduces integration capabilities within the Arklex Agent Framework, focusing on how agents can be connected to third-party systems like CRMs or external APIs. While currently highlighting HubSpot as a case study, the page sets the foundation for teaching new technical hires how to wire tools and workers into real business ecosystems. It demonstrates how to extend agent functionality beyond internal logic by embedding API-based services and provides an entry point for building custom integrations.",
+        "num": 1
+    }, {
+        "source": "https://arklexai.github.io/Agent-First-Organization/docs/Integration/Hubspot",
+        "desc": "This page details how to integrate HubSpot with the Arklex Agent Framework to enable CRM-based functionality like user identification, ticket creation, and meeting scheduling. It guides new technical hires through authenticating with the HubSpot API, configuring access scopes, and implementing tools that allow agents to retrieve contact data, log conversations, create tickets, and manage meeting availability. This resource is crucial for onboarding engineers tasked with building agents that interact with real customer data or handle enterprise workflows.",
+        "num": 1
+    }, {
+        "source": "https://arklexai.github.io/Agent-First-Organization/docs/Evaluation/intro",
+        "desc": "This page introduces the evaluation pipeline for task-oriented dialogue agents built with the Arklex framework. It walks technical hires through generating synthetic conversations, launching a local model API, and analyzing goal completion using configurable parameters like task count and max turns. This page is essential for validating agent performance, extracting metrics, and ensuring that new agents align with user objectives and expected behavior before deployment.",
+        "num": 1
+    }, {
+        "source": "https://arklexai.github.io/Agent-First-Organization/docs/Evaluation/UserSimulator",
+        "desc": "This page explains how to simulate user interactions for evaluating agent performance using a two-pass testing framework. It guides engineers through configuring parameters such as number of conversations, goals, and turn limits to assess goal completion and NLU accuracy. Useful for stress-testing bots under various scenarios and validating how well an agent satisfies user and builder objectives based on the config or TaskGraph.",
+        "num": 1
+    }, {
+        "source": "https://arklexai.github.io/Agent-First-Organization/docs/Evaluation/Metrics",
+        "desc": "This page outlines the evaluation metrics used to measure chatbot performance after simulation. It details three key indicators: user's goal completion rate (success rate), user's goal completion efficiency (average turns taken), and bot's goal completion rate (builder-defined success). Helps technical hires interpret simulation results and understand trade-offs between success and efficiency when optimizing TaskGraph flows or tuning agent behaviors.",
+        "num": 1
+    }],
+    "tasks": [],
+    "workers": [
+        {"id": "9aa47724-0b77-4752-9528-cf4b06a46915", "name": "FaissRAGWorker", "path": "faiss_rag_worker.py"},
+        {"id": "26bb6634-3bee-417d-ad75-23269ac17bc3", "name": "MessageWorker", "path": "message_worker.py"},
+        {"id": "9c15af81-04b3-443e-be04-a3522124b905", "name": "SearchWorker", "path": "search_worker.py"}
+    ],
+    "tools": []
+}

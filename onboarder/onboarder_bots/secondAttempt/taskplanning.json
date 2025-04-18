@@ -1,0 +1,55 @@
+[
+    {
+        "task_name": "Provide general information about Arklex AI and its framework",
+        "steps": [
+            "Welcome the new hire and introduce the purpose of the on-boarding assistant.",
+            "Use the FaissRAGWorker to retrieve general information about Arklex AI from internal documentation and present it to the new hire.",
+            "Ask the new hire if they have any specific questions about Arklex AI or its framework.",
+            "Use the FaissRAGWorker to answer any specific questions related to Arklex AI and its framework using internal documentation.",
+            "Provide instructions on where to find more detailed resources or documentation if needed.",
+            "Conclude the interaction by checking if the new hire needs further assistance or has additional questions."
+        ]
+    },
+    {
+        "task_name": "Guide the user on how to use the Arklex AI Agents Framework, including its components like TaskGraph, Workers, and Tools",
+        "steps": [
+            "Welcome the new hire and provide a brief introduction to the Arklex AI Agents Framework.",
+            "Use FaissRAGWorker to retrieve and provide an overview of the core components of the framework, including TaskGraph, Workers, and Tools.",
+            "Ask the new hire if they have any specific questions about the Arklex AI Agents Framework.",
+            "If the user has questions, use FaissRAGWorker to retrieve detailed answers from the company's internal documentation.",
+            "Guide the new hire on where to find additional resources related to the framework, such as GitHub repositories and setup guides.",
+            "Introduce the new hire to key members of the team and explain who to contact for specific issues or further assistance.",
+            "Confirm if the new hire feels comfortable with the information provided or needs further assistance."
+        ]
+    },
+    {
+        "task_name": "Answer technical queries and provide troubleshooting assistance for Arklex AI platform setup and usage",
+        "steps": [
+            "Greet the new hire and inquire about the specific technical issue or question they are facing with the Arklex AI platform.",
+            "Use FaissRAGWorker to search the company's internal documentation to find relevant information or troubleshooting steps related to the issue described by the user.",
+            "Provide a detailed explanation or solution to the user's issue using MessageWorker, including any necessary steps or resources they should consult.",
+            "Ask if the explanation or solution provided resolved the issue or if additional assistance is needed.",
+            "If the issue is unresolved, direct the user to relevant resources or suggest contacting specific team members using MessageWorker for further assistance."
+        ]
+    },
+    {
+        "task_name": "Direct the user to the appropriate resources such as GitHub repositories or documentation for technical tasks",
+        "steps": [
+            "Inquire about the specific technical task the new hire needs information or assistance with.",
+            "Use the FaissRAGWorker to search the company's internal documentation for relevant resources concerning the specified task.",
+            "Provide links or summaries of the relevant resources to the new hire using the MessageWorker.",
+            "Ask the new hire if they need further help with other technical tasks or resources."
+        ]
+    },
+    {
+        "task_name": "Introduce the user to team members and facilitate connections for further assistance",
+        "steps": [
+            "Greet the new hire and explain that the goal is to help them connect with the team members and get further assistance.",
+            "Inquire about the specific area or technology they need assistance with to pair them with the appropriate team member.",
+            "Utilize the FaissRAGWorker to retrieve information about team members responsible for various areas or technologies, based on internal documentation.",
+            "Provide the new hire with the contact information and roles of the relevant team member(s) who can assist with their specific needs.",
+            "Ask if the new hire requires further introductions or has other questions related to team members and their roles.",
+            "Confirm if the new hire is satisfied with the information and offer to assist with any other onboarding-related questions or tasks."
+        ]
+    }
+]
