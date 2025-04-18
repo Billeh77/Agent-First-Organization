@@ -161,7 +161,42 @@ class TaskEditorApp(App):
         log_message = f"Updated Tasks: {self.tasks}"
         logger.debug(log_message)
 
+try:
+    import tiktoken                         # pip install tiktoken  (≈50 kB)
+except ImportError:
+    tiktoken = None
+    
+# inside _generate_tasks()   (right before `answer = final_chain.invoke(...)`)
+MAX_TOKENS = 30_000          # model hard‑limit
 
+def _truncate_to_max_tokens(text, model: str = "gpt-4o-mini") -> str:
+    """
+    Accepts str / list / dict, converts to a deterministic string, then
+    truncates to ≤ MAX_TOKENS (using tiktoken when available).
+    """
+    # normalise to string
+    if isinstance(text, str):
+        prompt_str = text
+    else:
+        # for lists/dicts LangChain often passes → stringify compactly
+        import json, pprint
+        try:
+            prompt_str = json.dumps(text, ensure_ascii=False, separators=(",", ":"))
+        except TypeError:
+            prompt_str = pprint.pformat(text, width=120, compact=True)
+
+    # truncate
+    if tiktoken:
+        enc = tiktoken.encoding_for_model(model)
+        tokens = enc.encode(prompt_str)
+        if len(tokens) <= MAX_TOKENS:
+            return prompt_str
+        tokens = tokens[: MAX_TOKENS - 250]          # 100‑token buffer
+        return enc.decode(tokens)
+
+    # fallback heuristic (≈4 chars per token)
+    char_limit = (MAX_TOKENS - 250) * 3
+    return prompt_str if len(prompt_str) <= char_limit else prompt_str[:char_limit]
 
 
 class Generator:
@@ -189,7 +224,7 @@ class Generator:
         prompt = PromptTemplate.from_template(generate_tasks_sys_prompt)
         input_prompt = prompt.invoke({"role": self.role, "u_objective": self.u_objective, "intro": self.intro, "docs": self.documents})
         final_chain = self.model | StrOutputParser()
-        answer = final_chain.invoke(input_prompt)
+        answer = final_chain.invoke(_truncate_to_max_tokens(input_prompt))
         logger.debug(f"Generated tasks with thought: {answer}")
         self.tasks = postprocess_json(answer)
 
