@@ -190,11 +190,20 @@
         "desc": "This page outlines the evaluation metrics used to measure chatbot performance after simulation. It details three key indicators: user's goal completion rate (success rate), user's goal completion efficiency (average turns taken), and bot's goal completion rate (builder-defined success). Helps technical hires interpret simulation results and understand trade-offs between success and efficiency when optimizing TaskGraph flows or tuning agent behaviors.",
         "num": 1
     }],
-    "tasks": [],
+    "tasks": [
+        "Answer general questions about Arklex AI and its mission",
+        "Guide the user through setting up their development environment",
+        "Provide documentation explanations and links about Tutorials, Config, TaskGraph, Workers, MessageState, Tools, Integration, and Evaluation",
+        "Introduce the engineering team members and their roles",
+        "Help the user find answers using RAG on company docs and FAQs",
+        "Search online for external documentation using Tavily when asking about specific components, tools, or technologies that require more in depth explanations",
+        "Escalate to human support if the question is too technical or ambiguous"
+    ],
     "workers": [
         {"id": "9aa47724-0b77-4752-9528-cf4b06a46915", "name": "FaissRAGWorker", "path": "faiss_rag_worker.py"},
         {"id": "26bb6634-3bee-417d-ad75-23269ac17bc3", "name": "MessageWorker", "path": "message_worker.py"},
-        {"id": "9c15af81-04b3-443e-be04-a3522124b905", "name": "SearchWorker", "path": "search_worker.py"}
+        {"id": "9c15af81-04b3-443e-be04-a3522124b905", "name": "SearchWorker", "path": "search_worker.py"},
+        {"id": "b06c2b58-12c5-41fe-9838-e93b530e42e8", "name": "DefaultWorker", "path": "default_worker.py"}
     ],
     "tools": []
 }

@@ -1,0 +1,44 @@
+[
+    {
+        "task_name": "Provide general information about Arklex AI",
+        "steps": [
+            "Inquire if the user has specific questions or if they need a general overview of Arklex AI using the MessageWorker.",
+            "Based on the user\u2019s response, use the FaissRAGWorker to retrieve detailed and relevant information regarding Arklex AI from the internal documentation.",
+            "Deliver the retrieved information to the user through the MessageWorker, ensuring clarity and relevance to the user's inquiry.",
+            "Ask the user if they need further clarification or additional information on any specific topic using the MessageWorker.",
+            "If the user requests more information, repeat the process of retrieving and delivering information. If the user's queries have been satisfied, politely conclude the interaction."
+        ]
+    },
+    {
+        "task_name": "Guide user on how to use Arklex AI Agents Framework for building and creating agents",
+        "steps": [
+            "Introduce the user to the Arklex AI Agents Framework and inquire if they have specific questions or areas they want to explore.",
+            "Use the FaissRAGWorker to retrieve detailed information and answers from the company's internal documentation regarding their questions or areas of interest.",
+            "Deliver the retrieved information to the user through MessageWorker and provide clarification if needed.",
+            "Ask the user if they need guidance on specific tasks such as accessing GitHub repositories, setup, or additional technical resources.",
+            "Assist the user with next steps by providing links or contacts for further technical assistance, ensuring they have access to all relevant resources."
+        ]
+    },
+    {
+        "task_name": "Direct user to correct technical resources such as GitHub repositories and setup documentation",
+        "steps": [
+            "Direct user to correct technical resources such as GitHub repositories and setup documentation"
+        ]
+    },
+    {
+        "task_name": "Introduce user to Arklex team members",
+        "steps": [
+            "Introduce user to Arklex team members"
+        ]
+    },
+    {
+        "task_name": "Direct user to correct Arklex personnel for further assistance",
+        "steps": [
+            "Inquire about the type of assistance or area of expertise the user needs help with.",
+            "Use the FaissRAGWorker to search the company's internal documentation for information regarding team members and their areas of expertise.",
+            "Provide the user with the relevant team member's information based on the search results and explain how they can assist the user.",
+            "Ask if the user would like an introduction to the team member or further assistance connecting with them.",
+            "Facilitate the introduction or provide additional resources if the user requires further help."
+        ]
+    }
+]

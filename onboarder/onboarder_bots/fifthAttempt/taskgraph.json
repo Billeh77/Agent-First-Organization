@@ -1,0 +1,1555 @@
+{
+    "nodes": [
+        [
+            "0",
+            {
+                "resource": {
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "Hello and welcome to Arklex! I'm your on-boarding assistant, here to help you get started. Whether you have questions about the Arklex AI Agents Framework, need guidance on technical tasks, or want to learn more about our team, I'm here to assist you. How can I help you today?",
+                    "task": "start message",
+                    "directed": false
+                },
+                "limit": 1,
+                "type": "start"
+            }
+        ],
+        [
+            "1",
+            {
+                "resource": {
+                    "id": "9aa47724-0b77-4752-9528-cf4b06a46915",
+                    "name": "FaissRAGWorker"
+                },
+                "attribute": {
+                    "value": "",
+                    "task": "Use the FaissRAGWorker to get general information about arklex from sources rooted from https://www.arklex.ai/",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "2",
+            {
+                "resource": {
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "",
+                    "task": "Use the MessageWorker to find the most relevant information from what the RAGWorker provided answering the user's question",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "3",
+            {
+                "resource": {
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "Does this information answer your question about Arklex?",
+                    "task": "Use the MessageWorker to evaluate if the current response answers enough of the user's question",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "4",
+            {
+                "resource": {
+                    "id": "9aa47724-0b77-4752-9528-cf4b06a46915",
+                    "name": "FaissRAGWorker"
+                },
+                "attribute": {
+                    "value": "",
+                    "task": "If the message is not sufficient to answer the user's question, use FaissRAGWorker to look for more resources and blogs to supplement the answer to the user",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "5",
+            {
+                "resource": {
+                    "id": "9c15af81-04b3-443e-be04-a3522124b905",
+                    "name": "SearchWorker"
+                },
+                "attribute": {
+                    "value": "",
+                    "task": "If the message is not sufficient use the SearchWorker to find more information about arklex specific to the users question to supplement the response to the user",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "6",
+            {
+                "resource": {
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "Based on all the information gathered, here's what you need to know about Arklex. For more details, you can visit https://www.arklex.ai/.",
+                    "task": "Use the MessageWorker to write the final response answering what the user needed based on all RAG and SearchWorker results, provide the url https://www.arklex.ai/ for them to explore more if needed",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "7",
+            {
+                "resource": {
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "Welcome to the team! To start setting up your development environment, please clone the repo from https://github.com/arklexai/Agent-First-Organization.git. You can then create a new branch or fork as needed.",
+                    "task": "Use MessageWorker to welcome the new hire and explain the setup process for their development environment (Here start with the basics of cloning the repo https://github.com/arklexai/Agent-First-Organization.git, and provide basic steps of creating a new branch or forking).",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "8",
+            {
+                "resource": {
+                    "id": "9aa47724-0b77-4752-9528-cf4b06a46915",
+                    "name": "FaissRAGWorker"
+                },
+                "attribute": {
+                    "value": "I have found some documentation that should help you with your setup. Here is the guide you can follow: https://arklexai.github.io/Agent-First-Organization/docs/setup-guide. Please let me know if you need more details on specific components.",
+                    "task": "Use FaissRAGWorker to provide the new hire with access to the company's internal documentation that includes setup guides and any relevant documentation pertaining to their query. The documentation sources will start with https://arklexai.github.io/Agent-First-Organization/docs/ and the rest of the link should include the title and specific components in the documentation. Find the most relevant sources and documentation regarding the user's question.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "9",
+            {
+                "resource": {
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "Do you have any specific questions about the setup process, or is there anything you need further clarification on?",
+                    "task": "Use MessageWorker to ask the new hire if they have any specific questions about the setup process or if anything needs further clarification.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "10",
+            {
+                "resource": {
+                    "id": "9c15af81-04b3-443e-be04-a3522124b905",
+                    "name": "SearchWorker"
+                },
+                "attribute": {
+                    "value": "I found an external guide that might help: [link to real-time search result]. Please check if this answers your query or if you'd like more detailed exploration on a particular topic.",
+                    "task": "Use SearchWorker to assist the new hire with any additional queries they may have by providing real-time search results for external resources or guides. If the sources provided by the FaissRAGWorker are not sufficient to answer the user's questions, find the parts that need more detail and exploration to search for and help complement explaining the setup for the new employee.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "11",
+            {
+                "resource": {
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "If you encounter any technical difficulties or need further assistance, please feel free to contact an appropriate team member or reach out to our IT support.",
+                    "task": "Use MessageWorker to direct the new hire to contact an appropriate team member or IT support if they encounter technical difficulties or need further assistance.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "12",
+            {
+                "resource": {
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "To summarize, you've now set up the repo, explored documentation, and know whom to contact for help. Feel free to reach out if you have any more questions. Welcome again, and I'm sure you'll do great!",
+                    "task": "Conclude by using MessageWorker to summarize the key steps, provide encouragement, and offer to assist with any further questions as they continue to settle into their new role.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "13",
+            {
+                "resource": {
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "If you need help setting up your local environment, here are the steps: Create a virtual environment using `python3 -m venv venv`, activate it with `source venv/bin/activate`, upgrade pip with `pip install --upgrade pip`, and install dependencies using `pip install arklex`.",
+                    "task": "Use the MessageWorker to provide support about setting up the new technical developer employee's local environment if needed. If they are confused about setting up their local environment, provide these steps to create a virtual environment and setup dependencies: python3 -m venv venv, source venv/bin/activate, pip install --upgrade pip, pip install arklex.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "14",
+            {
+                "resource": {
+                    "id": "9aa47724-0b77-4752-9528-cf4b06a46915",
+                    "name": "FaissRAGWorker"
+                },
+                "attribute": {
+                    "value": "Here is the information you need about TaskGraph: [Documentation Link]",
+                    "task": "If the user specified which aspect of the Arklex AI Agents Framework they need more information about, such as Tutorials, Config, TaskGraph, Workers, MessageState, Tools, Integration, or Evaluation. Then use the FaissRAGWorker to get all the information needed from the documentations regarding the user's specific topic of inquiry, the documentation sources all start with https://arklexai.github.io/Agent-First-Organization/docs/ and the rest of the source link will have the specific topic the user is interested in learning more about (For example https://arklexai.github.io/Agent-First-Organization/docs/Taskgraph/Generation is about task graph generation, or https://arklexai.github.io/Agent-First-Organization/docs/Workers/DatabaseWorker is about workers specifically the DatabaseWorker).",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "15",
+            {
+                "resource": {
+                    "id": "9aa47724-0b77-4752-9528-cf4b06a46915",
+                    "name": "FaissRAGWorker"
+                },
+                "attribute": {
+                    "value": "I have found the relevant documentation on Tools: [Documentation Link]",
+                    "task": "Use FaissRAGWorker to find the most relevant documentation and explanations from the company's internal unstructured text data regarding the specified topic. The documentation links all start with https://arklexai.github.io/Agent-First-Organization/docs/ the rest of the link will have the specific topic within the documentation to look into such as workers, tools, config and more. Use the source descriptions to find the most compatable sources to answer the user's questions.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "16",
+            {
+                "resource": {
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "To better understand the Worker components, please see the documentation here: [Documentation Link]. Key components include...",
+                    "task": "Deliver the retrieved information and documentation links to the user using the MessageWorker. Using all the information provided by RAG, analyze the key components that will answer the user's questions effectively, and write an effective guide to help them understand the details (remember that the user is a new technical employee hire).",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "17",
+            {
+                "resource": {
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "Do you need further clarification on this topic? You can explore more here: [Documentation Link]",
+                    "task": "Inquire if the user needs further clarification or additional information on the topic or another topic related to the Arklex AI Agents Framework. Direct them to the documentations used to answer their questions based on the resources used by the FaissRAGWorker. The sources start with https://arklexai.github.io/Agent-First-Organization/docs/, provide them with the specific sources that would best help answer their questions based on the source description, default to providing the intro to the documentation found at https://arklexai.github.io/Agent-First-Organization/docs/intro if no specific source is found.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "18",
+            {
+                "resource": {
+                    "id": "9aa47724-0b77-4752-9528-cf4b06a46915",
+                    "name": "FaissRAGWorker"
+                },
+                "attribute": {
+                    "value": "For more detailed guidance, please refer to the following resources: [Resource Links]",
+                    "task": "Provide additional information or direct the user to the relevant resources or team members for further assistance as needed. Use the FaissRAGWorker to find the most relevant sources for the user based on the user's question and the description of the sources. Provide the most relevant sources, what they contain, and how the new employee hire can use them to best understand the Arklex AI Framework.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "19",
+            {
+                "resource": {
+                    "id": "9aa47724-0b77-4752-9528-cf4b06a46915",
+                    "name": "FaissRAGWorker"
+                },
+                "attribute": {
+                    "value": "Here are the most relevant links for your query: [Links]",
+                    "task": "Use FaissRAGWorker to explore based on the user's query and find the most relevant sources based on the source description. The documentation sources for the Agent=First-Organization open-source repo starts with https://arklexai.github.io/Agent-First-Organization/docs/ the rest of the source url will contain the title of the specific component and part of the documentation, use that to find the most relevant sources for the user.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "20",
+            {
+                "resource": {
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "Here's a comprehensive guide based on your query to help you get started: [Comprehensive Guide]",
+                    "task": "Use the MessageWorker to put everything that the FaissRAGWorker and SearchWorker provided into a comprehensive guide for the new technical employee to understand the Agent-First-Organization repo, framework, and code. Add the source url https://arklexai.github.io/Agent-First-Organization/docs/intro tor refer them to the documentation if needed, but preferebly provide specific sources pertaining to their question. The documentation sources start with https://arklexai.github.io/Agent-First-Organization/docs/ in their url and the rest of the url can include the specific subject that the new technical hire is interested in.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "21",
+            {
+                "resource": {
+                    "id": "9c15af81-04b3-443e-be04-a3522124b905",
+                    "name": "SearchWorker"
+                },
+                "attribute": {
+                    "value": "I found additional detailed information about the specific tool you are interested in: [Search Result Link]",
+                    "task": "Use the SearchWorker if the user is asking about something specific in the documentation that needs more ellaboration than what is found in the documentations retrieved by the FaissRAGWorker. If the user is asking about a specific tool, component, or technology used by the Agent-First-Organization and is mentioned in the documentations provided by the RAGWorker but not in full depth and the user needs more information or help setting up, then this needs to be searched and provided to complement the response for the new technical employee.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "22",
+            {
+                "resource": {
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "To wrap it up, here's a comprehensive overview and guidance for understanding the Agent-First-Organization: [Final Guide]",
+                    "task": "Use the MessageWorker to write a final response that is comprehensive, specific, and effectively guides the new employee to understand the Agent-First-Organization repo and Arklex AI framework. Use everything provided by RAGWorker and the SearchWorker, and provide any resources used where the user can get more information about their query.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "23",
+            {
+                "resource": {
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "Welcome to Arklex AI! Our team is small, and we're still a startup. For the best support, feel free to reach out to our founders: Zhou Yu, CEO, and Arbit Chen, CTO.",
+                    "task": "Provide a general introduction to the engineering team using the MessageWorker. The team is small and the company is still a startup, the new employee can contact the founders for the most optimal support: Zhou Yu, CEO and Arbit Chen, CTO.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "24",
+            {
+                "resource": {
+                    "id": "9c15af81-04b3-443e-be04-a3522124b905",
+                    "name": "SearchWorker"
+                },
+                "attribute": {
+                    "value": "Searching LinkedIn for the Arklex AI team. Let me find more about the role of [specific person mentioned].",
+                    "task": "Utilize the SearchWorker to search members of Arklex AI through LinkedIn. If the user already mentioned anyone specific in the query, search for that team member on LinkedIn specifically to find what their role is and how the new employee will work with them.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "25",
+            {
+                "resource": {
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "Here are some of the team members you might work with: Salia Nahshal (Frontend Developer), Swasthi Rao (Machine Learning), Atharv Sardesai (Machine Learning Engineer), and others.",
+                    "task": "Present the team member information and their roles to the user using the MessageWorker. If more specific roles or personnel are needed, here is a list of some of the team members and roles: Salia Nahshal: Frontend Developer at Arklex AI, Swasthi Rao: Machine Learning at ArkLex AI, Atharv Sardesai: Machine Learning Engineer @ Arklex AI, Anusha Lavanuru: Backend at Arklex AI, Xinyang Wang: Machine Learning Engineer at Arklex AI, Ruoyang Liu: Full-Stack Engineer at Arklex AI, Shehan Panditharatne: Founding Engineer at Arklex AI, Isaac Song: Machine Learning Engineer, Zhou (Jo) Yu: Founder and CEO, Chun-Yen C.: Co-founder and CTO, Angela Sharma: General Technical Manager, Kuan Chieh Tung: Full-Stack Engineer. Use this list to introduce anyone relevant to the new employee's questions.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "26",
+            {
+                "resource": {
+                    "id": "9c15af81-04b3-443e-be04-a3522124b905",
+                    "name": "SearchWorker"
+                },
+                "attribute": {
+                    "value": "Would you like more detailed information about any specific team member or role? Let me know, and I can find more details for you.",
+                    "task": "Ask the user if they need more detailed information about any specific team member or role. Use the SearchWorker to find more info about the team here: Salia Nahshal: Frontend Developer at Arklex AI, Swasthi Rao: Machine Learning at Arklex AI, Atharv Sardesai: Machine Learning Engineer @ Arklex AI, Anusha Lavanuru: Backend at Arklex AI, Xinyang Wang: Machine Learning Engineer at Arklex AI, Ruoyang Liu: Full\u2013Stack Engineer at Arklex AI, Shehan Panditharatne: Founding Engineer at Arklex AI, Isaac Song: Machine Learning Engineer, Zhou (Jo) Yu: Founder and CEO, Chun-Yen C.: Co-founder and CTO, Angela Sharma: General Technical Manager, Kuan Chieh Tung: Full\u2013Stack Engineer. Search the most relevant co-workers based on the user's question, to help introduce those co-workers to the new employee and help them with what they need. Search them through LinkedIn and other sources.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "27",
+            {
+                "resource": {
+                    "id": "9aa47724-0b77-4752-9528-cf4b06a46915",
+                    "name": "FaissRAGWorker"
+                },
+                "attribute": {
+                    "value": "Finding additional context from our internal documents for further details about [team member].",
+                    "task": "If further details are requested, use the FaissRAGWorker to provide additional context or direct the user to the appropriate resource for each team member using the MessageWorker.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "28",
+            {
+                "resource": {
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "Based on your queries, you may find it useful to connect with Angela Sharma (General Technical Manager) and Kuan Chieh Tung (Full-Stack Engineer) for more insights.",
+                    "task": "Use the MessageWorker to provide a response to the user, identifying the most relevant employees to refer the new employee to based on their query and questions.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "29",
+            {
+                "resource": {
+                    "id": "9aa47724-0b77-4752-9528-cf4b06a46915",
+                    "name": "FaissRAGWorker"
+                },
+                "attribute": {
+                    "value": "I found detailed information in our internal documentation that answers your question about company policies.",
+                    "task": "Help the user find answers using RAG on company docs and FAQs. Use the FaissRAGWorker to find the most relevant sources based on their descriptions, and look through them to find and summarize the most critical information to answer the new employee's questions.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "30",
+            {
+                "resource": {
+                    "id": "9aa47724-0b77-4752-9528-cf4b06a46915",
+                    "name": "FaissRAGWorker"
+                },
+                "attribute": {
+                    "value": "For more details on your query, you can check this documentation: https://arklexai.github.io/Agent-First-Organization/docs/specific_subject",
+                    "task": "Use the FaissRAGWorker to look for specific documentation sources if they are relevant to the user's query. All the documentation sources urls start with https://arklexai.github.io/Agent-First-Organization/docs/, the rest of the url will contain specific subjects that the user might be asking for, use that along with the source description to find the most relevant information for the new employee.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "31",
+            {
+                "resource": {
+                    "id": "9aa47724-0b77-4752-9528-cf4b06a46915",
+                    "name": "FaissRAGWorker"
+                },
+                "attribute": {
+                    "value": "Here's some general information about Agent-First-Organization from our FAQ: [Link to FAQ]",
+                    "task": "Use the FaissRAGWorker to find general information about Agent-First-Organization and the Arklex AI framework, the general information, FAQ, blogs and more can be found from the sources retrieved through https://www.arklex.ai/, find any relevant information pertaining to the user's questions.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "32",
+            {
+                "resource": {
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "I have compiled a comprehensive response to help you understand our framework. Here's where you can explore more: [Link to docs]",
+                    "task": "Use the MessageWorker to write a comprehensive, specific, and guided response that can help the user understand the Agent-First-Organization documentation and Arklex AI framework, use cases and more. Provide sources for the user to explore if needed from what is available in the task_docs and rag_docs.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "33",
+            {
+                "resource": {
+                    "id": "9c15af81-04b3-443e-be04-a3522124b905",
+                    "name": "SearchWorker"
+                },
+                "attribute": {
+                    "value": "I conducted an in-depth search and found more detailed information regarding your specific query.",
+                    "task": "If there are specific questions that the user has that are not fully satisfied by what was on the documentation and what was retrieved by RAG, use the SearchWorker to find more in depth explanations to specific tools, components, and technologies used. If the user's question is specific but the answer doesn't answer the question in enough depth, use the SearchWorker to find more in depth explanations to supplement the response for the new employee.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "34",
+            {
+                "resource": {
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "Based on the information found, here's a detailed answer to your query. You can also review the documentation further here: [Link to resources]",
+                    "task": "Use the MessageWorker to write a comprehensive, effective, and specific response to the user's query using the results from the FaissRAGWorker and the SearchWorker. Provide relevant sources regarding the documentation, general info, or refer to team members if needed.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "35",
+            {
+                "resource": {
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "Welcome aboard! Do you have any questions about specific components, tools, or technologies that you need help with?",
+                    "task": "Welcome the new hire and ask if they have any questions regarding specific components, tools, or technologies they need help with.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "36",
+            {
+                "resource": {
+                    "id": "9c15af81-04b3-443e-be04-a3522124b905",
+                    "name": "SearchWorker"
+                },
+                "attribute": {
+                    "value": "",
+                    "task": "If a specific component, tool, or technology is mentioned, use the SearchWorker to conduct an online search for external documentation and provide detailed information.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "37",
+            {
+                "resource": {
+                    "id": "9aa47724-0b77-4752-9528-cf4b06a46915",
+                    "name": "FaissRAGWorker"
+                },
+                "attribute": {
+                    "value": "Here's an overview of the Arklex AI Agents Framework. You can learn more through our documentation here: https://arklexai.github.io/Agent-First-Organization/docs/",
+                    "task": "Provide an overview of the Arklex AI Agents Framework using the MessageWorker to familiarize the new hire with its functionalities. Use the FaissRAGWorker to find sources for the Agent-First-Organization documentation which all start with https://arklexai.github.io/Agent-First-Organization/docs/, the rest of the source url will contain the specific topic the user may be asking about. Use the source description and URL to find the most relevant topics pertaining the user's question.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "38",
+            {
+                "resource": {
+                    "id": "9aa47724-0b77-4752-9528-cf4b06a46915",
+                    "name": "FaissRAGWorker"
+                },
+                "attribute": {
+                    "value": "",
+                    "task": "Use the FaissRAGWorker to dig into the company's internal documentation to answer any additional questions the new hire may have about Arklex AI or the framework.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "39",
+            {
+                "resource": {
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "For further assistance, you can reach out to Salia Nahshal for frontend development questions or Swasthi Rao for machine learning inquiries.",
+                    "task": "Direct the new hire to the appropriate resources or team members for further technical assistance or onboarding steps. Reference specific team members from this list, Salia Nahshal: Frontend Developer at Arklex AI, Swasthi Rao: Machine Learning at Arklex AI, Atharv Sardesai: Machine Learning Engineer @ Arklex AI, Anusha Lavanuru: Backend at Arklex AI, Xinyang Wang: Machine Learning Engineer at Arklex AI, Ruoyang Liu: Full\u2013Stack Engineer at Arklex AI, Shehan Panditharatne: Founding Engineer at Arklex AI, Isaac Song: Machine Learning Engineer, Zhou (Jo) Yu: Founder and CEO, Chun-Yen C.: Co-founder and CTO, Angela Sharma: General Technical Manager, Kuan Chieh Tung: Full\u2013Stack Engineer.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "40",
+            {
+                "resource": {
+                    "id": "9c15af81-04b3-443e-be04-a3522124b905",
+                    "name": "SearchWorker"
+                },
+                "attribute": {
+                    "value": "",
+                    "task": "Use the SearchWorker to search specific team members on LinkedIn to find the most suitable team members to help the user with their concerns.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "41",
+            {
+                "resource": {
+                    "id": "9c15af81-04b3-443e-be04-a3522124b905",
+                    "name": "SearchWorker"
+                },
+                "attribute": {
+                    "value": "",
+                    "task": "Use the SearchWorker to search for specific information that the user needs. Check what is provided by the FaissRAGWorker and search for specific information that is not sufficiently answer by the rag_docs and needs more in depth explanations to answer the new employee's question.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "42",
+            {
+                "resource": {
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "Here's a detailed guide on the components you'll be working with: [insert URLs]. Feel free to connect with Ruoyang Liu for further information about full-stack engineering in our framework.",
+                    "task": "Use the MessageWorker to write a comprehensive, specific, and guided response to help the new employee understand the components, tools, and technologies in the Agent-First-Organization base don what was provided by the FaissRAGWorker and the SearchWorker. Provied urls to the github, documentation, or search urls if needed. Provide intros to team members that can further assist the new employee with their queries if needed.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "43",
+            {
+                "resource": {
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "Your inquiry is quite technical. I'll escalate this to Swasthi Rao, our Machine Learning expert, for a more detailed response.",
+                    "task": "Escalate to human support if the question is too technical or ambiguous. Find the most relevant team member from this list to help support the user's specific questions. here is the list of team members: Salia Nahshal: Frontend Developer at Arklex AI, Swasthi Rao: Machine Learning at Arklex AI, Atharv Sardesai: Machine Learning Engineer @ Arklex AI, Anusha Lavanuru: Backend at Arklex AI, Xinyang Wang: Machine Learning Engineer at Arklex AI, Ruoyang Liu: Full\u2013Stack Engineer at Arklex AI, Shehan Panditharatne: Founding Engineer at Arklex AI, Isaac Song: Machine Learning Engineer, Zhou (Jo) Yu: Founder and CEO, Chun-Yen C.: Co-founder and CTO, Angela Sharma: General Technical Manager, Kuan Chieh Tung: Full\u2013Stack Engineer.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "44",
+            {
+                "resource": {
+                    "id": "9c15af81-04b3-443e-be04-a3522124b905",
+                    "name": "SearchWorker"
+                },
+                "attribute": {
+                    "value": "Conducting a search on LinkedIn to gather more information about the roles and expertise of Swasthi Rao and his involvement in our projects.",
+                    "task": "Use the SearchWorker to find more information about the specific employees, their roles, and how they can help the new employee. Search on LinkedIn, find the employees to get more information to introduce them to the new employee.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ],
+        [
+            "45",
+            {
+                "resource": {
+                    "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+                    "name": "MessageWorker"
+                },
+                "attribute": {
+                    "value": "Introducing you to Swasthi Rao, a Machine Learning expert at Arklex AI. He can help you understand the intricacies of our ML models and how to implement them effectively.",
+                    "task": "Use the MessageWorker to write a nice intro to the relevant team members that can help the user and how those team members can help the new employee.",
+                    "directed": false
+                },
+                "limit": 1
+            }
+        ]
+    ],
+    "edges": [
+        [
+            "0",
+            "1",
+            {
+                "intent": "Answer general questions about Arklex AI and its mission",
+                "attribute": {
+                    "weight": 1,
+                    "pred": true,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "1",
+            "2",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "2",
+            "3",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "3",
+            "4",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "4",
+            "5",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "5",
+            "6",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "0",
+            "7",
+            {
+                "intent": "Guide the user through setting up their development environment",
+                "attribute": {
+                    "weight": 1,
+                    "pred": true,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "7",
+            "8",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "8",
+            "9",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "9",
+            "10",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "10",
+            "11",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "11",
+            "12",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "12",
+            "13",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "0",
+            "14",
+            {
+                "intent": "Provide documentation explanations and links about Tutorials, Config, TaskGraph, Workers, MessageState, Tools, Integration, and Evaluation",
+                "attribute": {
+                    "weight": 1,
+                    "pred": true,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "14",
+            "15",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "15",
+            "16",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "16",
+            "17",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "17",
+            "18",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "18",
+            "19",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "19",
+            "20",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "20",
+            "21",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "21",
+            "22",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "0",
+            "23",
+            {
+                "intent": "Introduce the engineering team members and their roles",
+                "attribute": {
+                    "weight": 1,
+                    "pred": true,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "23",
+            "24",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "24",
+            "25",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "25",
+            "26",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "26",
+            "27",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "27",
+            "28",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "0",
+            "29",
+            {
+                "intent": "Help the user find answers using RAG on company docs and FAQs",
+                "attribute": {
+                    "weight": 1,
+                    "pred": true,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "29",
+            "30",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "30",
+            "31",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "31",
+            "32",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "32",
+            "33",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "33",
+            "34",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "0",
+            "35",
+            {
+                "intent": "Search online for external documentation using Tavily when asking about specific components, tools, or technologies that require more in depth explanations",
+                "attribute": {
+                    "weight": 1,
+                    "pred": true,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "35",
+            "36",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "36",
+            "37",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "37",
+            "38",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "38",
+            "39",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "39",
+            "40",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "40",
+            "41",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "41",
+            "42",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "0",
+            "43",
+            {
+                "intent": "Escalate to human support if the question is too technical or ambiguous",
+                "attribute": {
+                    "weight": 1,
+                    "pred": true,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "43",
+            "44",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ],
+        [
+            "44",
+            "45",
+            {
+                "intent": "None",
+                "attribute": {
+                    "weight": 1,
+                    "pred": false,
+                    "definition": "",
+                    "sample_utterances": []
+                }
+            }
+        ]
+    ],
+    "role": "on\u2011boarding assistant",
+    "user_objective": "Help new Arklex technical hires answer questions, familiarize with Arklex AI Agents Framework, and get comfortable with their new work environment. Provides general information about Arklex AI, provides guidance for questions related to using the Arklex AI Agents Framework to build and create agents, helps direct new hire to correct resources for technical tasks including GitHub repo or setup, and familiarizes the new employee with members of the Arklex team and directs them to correct people for further assitance.",
+    "builder_objective": "The on-boarding assistant helps to record progress and familiarity of the new hire with Arklex AI in the progress database.",
+    "domain": "AI Agent Framework\u00a0Engineerin",
+    "intro": "Arklex\u202fAI builds an open\u2011source and enterprise agent\u2011orchestration platform focused on mixed\u2011control, TaskGraph\u2011based decision flows, and continual learning. The engineering team works mainly in Python (3.10+), TaskGraph, Kubernetes, and GitHub Actions.",
+    "task_docs": [
+        {
+            "source": "https://www.arklex.ai/",
+            "desc": "Arklex's landing page provides a high-level overview of the company's mission, core AI capabilities, differentiating features, and enterprise value. It helps new hires understand Arklex's vision, product offering, customer base, and strategic positioning. Useful for answering general company questions, explaining business objectives, or introducing Arklex to non-technical stakeholders.",
+            "num": 20
+        },
+        {
+            "source": "https://arklexai.github.io/Agent-First-Organization/docs/intro",
+            "desc": "This introduction outlines the core philosophy behind the Arklex AI Agent Framework. It explains how Arklex bridges the gap between rigid rule-based systems and unpredictable autonomous agents by integrating Task Graphs, Mixed-Control logic, and continual learning. This page is essential for new technical hires to understand the 'why' behind Arklex\u2014its goals, architectural vision, and competitive advantages\u2014and serves as a foundational resource for onboarding into the framework.",
+            "num": 1
+        },
+        {
+            "source": "https://arklexai.github.io/Agent-First-Organization/docs/tutorials/intro",
+            "desc": "This tutorials overview introduces hands-on examples of how to use the Arklex AI Agent Framework in real-world applications. It links to practical walkthroughs like the Customer Service Agent and Booking Service Bot, guiding new technical hires through step-by-step implementations of Retrieval-Augmented Generation (RAG) and database integration. This page helps new engineers explore how Arklex components work in context, offering an ideal starting point for learning through applied use cases.",
+            "num": 1
+        },
+        {
+            "source": "https://arklexai.github.io/Agent-First-Organization/docs/tutorials/customer-service",
+            "desc": "This tutorial provides a step-by-step guide to building a customer service agent using the Arklex Agent Framework. It introduces key concepts such as TaskGraph construction, RAG integration, and worker configuration, making it ideal for technical new hires to understand how to create agents from a config file and support real user interactions. Engineers can reference this page to learn how to supply knowledge sources, design workflows, and evaluate agent performance in production-like scenarios.",
+            "num": 1
+        },
+        {
+            "source": "https://arklexai.github.io/Agent-First-Organization/docs/tutorials/booking-service",
+            "desc": "This tutorial walks through building a booking assistant that integrates with real or mock databases using the Arklex DatabaseWorker. It teaches technical hires how to configure agents that can not only answer questions but also read from and write to databases\u2014ideal for use cases like ticket reservations or scheduling. Engineers can use this page to learn how to structure config files for transactional agents and understand the execution flow from user input to database operations.",
+            "num": 1
+        },
+        {
+            "source": "https://arklexai.github.io/Agent-First-Organization/docs/Config/intro",
+            "desc": "This page provides the structure and purpose of the configuration (config) JSON file used to define an agent's behavior, knowledge sources, and components. New technical hires can use it as a reference to understand how to describe agent roles, objectives, documents, workers, and tools\u2014ultimately enabling automated TaskGraph generation. This is a foundational page for learning how to customize and deploy agents efficiently within the Arklex framework.",
+            "num": 1
+        },
+        {
+            "source": "https://arklexai.github.io/Agent-First-Organization/docs/Config/ChatModels",
+            "desc": "This page outlines how to configure and use different LLM providers (OpenAI, Google Gemini, Anthropic, Hugging Face) within the Arklex framework for taskgraph generation and runtime. It provides usage examples, supported model lists, and API key setup instructions. New hires can refer to this page to understand model compatibility, select appropriate LLMs, and troubleshoot model setup when deploying agents with different backends.",
+            "num": 1
+        },
+        {
+            "source": "https://arklexai.github.io/Agent-First-Organization/docs/Taskgraph/intro",
+            "desc": "This page introduces the concept of TaskGraphs in the Arklex framework, explaining how complex agent behaviors are broken into structured nodes (tasks) and edges (execution paths). It helps new hires understand how agents coordinate multi-step workflows across workers and dynamically adapt to user input. Use this page to grasp the core structure and execution flow behind agent orchestration, and how real-world tasks are modeled within the system.",
+            "num": 1
+        },
+        {
+            "source": "https://arklexai.github.io/Agent-First-Organization/docs/Taskgraph/Generation",
+            "desc": "This page details the step-by-step process of converting a config file into an operational TaskGraph, including task decomposition, builder interaction, and worker assignment. New hires can use this page to understand how Arklex agents are programmatically structured, customized through an interactive planner, and mapped to specific workers. It is critical for learning how high-level objectives are translated into executable multi-step agent workflows.",
+            "num": 1
+        },
+        {
+            "source": "https://arklexai.github.io/Agent-First-Organization/docs/MessageState",
+            "desc": "This page defines the MessageState object, a structured representation of the conversation's current context passed between the orchestrator and workers. It outlines critical fields like user input, system instructions, node transitions, and slot-filling metadata. This page is essential for developers building or debugging workers, as it shows how context is carried and modified throughout TaskGraph execution.",
+            "num": 1
+        },
+        {
+            "source": "https://arklexai.github.io/Agent-First-Organization/docs/Workers/intro",
+            "desc": "This page introduces the concept of Workers\u2014the modular execution units in the Arklex Agent First Organization framework responsible for handling tasks and subtasks. It explains how Workers operate using MessageState as input/output and how they can call other Workers recursively. This is a key page for technical hires looking to understand and implement custom task logic or extend the framework's capabilities.",
+            "num": 1
+        },
+        {
+            "source": "https://arklexai.github.io/Agent-First-Organization/docs/Workers",
+            "desc": "This page explains the foundational role of Workers in the Arklex framework. It introduces the BaseWorker class, outlines how Workers execute tasks using MessageState, and describes how they integrate into the TaskGraph as nodes or subgraphs via LangGraph. This page is essential for new hires aiming to develop, extend, or customize Workers to handle specific tasks during agent execution.",
+            "num": 1
+        },
+        {
+            "source": "https://arklexai.github.io/Agent-First-Organization/docs/Workers/MessageWorker",
+            "desc": "This page details the MessageWorker, the foundational component for handling chat responses in Arklex agents. It explains how MessageWorker uses LangGraph and LLMs to generate structured responses from system and user context via MessageState. New hires should reference this to understand the response flow, node structure, and prompt generation logic that powers the agent's conversational outputs.",
+            "num": 1
+        },
+        {
+            "source": "https://arklexai.github.io/Agent-First-Organization/docs/Workers/RAGWorker",
+            "desc": "This page introduces RAGWorker, a key component in enabling Retrieval Augmented Generation for Arklex agents. It explains how the RAGWorker retrieves contextually relevant information using FAISS and composes responses by integrating this data with LLMs. Technical hires should use this page to understand how internal documents are accessed, how the retrieval pipeline is structured via LangGraph nodes, and how context-aware answers are generated dynamically from indexed sources.",
+            "num": 1
+        },
+        {
+            "source": "https://arklexai.github.io/Agent-First-Organization/docs/Workers/DatabaseWorker",
+            "desc": "This page details the implementation of the DatabaseWorker, a specialized component for executing dynamic, database-driven tasks such as searching, booking, and canceling records. Using a sample show booking system, it illustrates how to design and populate relational schemas (e.g., shows, users, bookings) and integrate database operations into the agent flow via slot filling and task-mapped actions. New hires can refer to this guide to understand how to build agents that interact with SQL-based systems and respond based on real-time data.",
+            "num": 1
+        },
+        {
+            "source": "https://arklexai.github.io/Agent-First-Organization/docs/Workers/SearchWorker",
+            "desc": "This page explains the implementation and function of SearchWorker, a component designed to fetch real-time web data using Tavily\u2019s search API. Unlike RAGWorker, which retrieves from local documents, SearchWorker converts user prompts into independent queries and pulls current information from the internet before composing a response. It\u2019s essential for building agents that answer time-sensitive or non-documented questions. Technical hires can use this to understand how to integrate live web search into agent workflows.",
+            "num": 1
+        },
+        {
+            "source": "https://arklexai.github.io/Agent-First-Organization/docs/Workers/DefaultWorker",
+            "desc": "This page describes the DefaultWorker, a fallback worker used when no other worker is matched during TaskGraph generation. It dynamically selects the most appropriate worker at runtime by leveraging an LLM to compare the task description against available workers' capabilities. New engineering hires can learn how the DefaultWorker provides flexibility and resilience by ensuring that every query has a valid execution path, even if no explicit match is found during planning.",
+            "num": 1
+        },
+        {
+            "source": "https://arklexai.github.io/Agent-First-Organization/docs/Tools",
+            "desc": "This page introduces Tools, which are lightweight, flexible task execution units used in Arklex's agent framework. Unlike Workers, Tools operate with simple input/output parameters and are powered by slot-filling for data extraction from conversations. New engineers can use this page to learn how to define, register, and structure custom API functions or utility logic as Tools using the @register_tool decorator. It also explains how to set slot parameters, expected outputs, and completion logic to seamlessly integrate Tools into TaskGraphs.",
+            "num": 1
+        },
+        {
+            "source": "https://arklexai.github.io/Agent-First-Organization/docs/Integration/intro",
+            "desc": "This page introduces integration capabilities within the Arklex Agent Framework, focusing on how agents can be connected to third-party systems like CRMs or external APIs. While currently highlighting HubSpot as a case study, the page sets the foundation for teaching new technical hires how to wire tools and workers into real business ecosystems. It demonstrates how to extend agent functionality beyond internal logic by embedding API-based services and provides an entry point for building custom integrations.",
+            "num": 1
+        },
+        {
+            "source": "https://arklexai.github.io/Agent-First-Organization/docs/Integration/Hubspot",
+            "desc": "This page details how to integrate HubSpot with the Arklex Agent Framework to enable CRM-based functionality like user identification, ticket creation, and meeting scheduling. It guides new technical hires through authenticating with the HubSpot API, configuring access scopes, and implementing tools that allow agents to retrieve contact data, log conversations, create tickets, and manage meeting availability. This resource is crucial for onboarding engineers tasked with building agents that interact with real customer data or handle enterprise workflows.",
+            "num": 1
+        },
+        {
+            "source": "https://arklexai.github.io/Agent-First-Organization/docs/Evaluation/intro",
+            "desc": "This page introduces the evaluation pipeline for task-oriented dialogue agents built with the Arklex framework. It walks technical hires through generating synthetic conversations, launching a local model API, and analyzing goal completion using configurable parameters like task count and max turns. This page is essential for validating agent performance, extracting metrics, and ensuring that new agents align with user objectives and expected behavior before deployment.",
+            "num": 1
+        },
+        {
+            "source": "https://arklexai.github.io/Agent-First-Organization/docs/Evaluation/UserSimulator",
+            "desc": "This page explains how to simulate user interactions for evaluating agent performance using a two-pass testing framework. It guides engineers through configuring parameters such as number of conversations, goals, and turn limits to assess goal completion and NLU accuracy. Useful for stress-testing bots under various scenarios and validating how well an agent satisfies user and builder objectives based on the config or TaskGraph.",
+            "num": 1
+        },
+        {
+            "source": "https://arklexai.github.io/Agent-First-Organization/docs/Evaluation/Metrics",
+            "desc": "This page outlines the evaluation metrics used to measure chatbot performance after simulation. It details three key indicators: user's goal completion rate (success rate), user's goal completion efficiency (average turns taken), and bot's goal completion rate (builder-defined success). Helps technical hires interpret simulation results and understand trade-offs between success and efficiency when optimizing TaskGraph flows or tuning agent behaviors.",
+            "num": 1
+        }
+    ],
+    "rag_docs": [
+        {
+            "source": "https://www.arklex.ai/",
+            "desc": "Arklex's landing page provides a high-level overview of the company's mission, core AI capabilities, differentiating features, and enterprise value. It helps new hires understand Arklex's vision, product offering, customer base, and strategic positioning. Useful for answering general company questions, explaining business objectives, or introducing Arklex to non-technical stakeholders.",
+            "num": 20
+        },
+        {
+            "source": "https://arklexai.github.io/Agent-First-Organization/docs/intro",
+            "desc": "This introduction outlines the core philosophy behind the Arklex AI Agent Framework. It explains how Arklex bridges the gap between rigid rule-based systems and unpredictable autonomous agents by integrating Task Graphs, Mixed-Control logic, and continual learning. This page is essential for new technical hires to understand the 'why' behind Arklex\u2014its goals, architectural vision, and competitive advantages\u2014and serves as a foundational resource for onboarding into the framework.",
+            "num": 1
+        },
+        {
+            "source": "https://arklexai.github.io/Agent-First-Organization/docs/tutorials/intro",
+            "desc": "This tutorials overview introduces hands-on examples of how to use the Arklex AI Agent Framework in real-world applications. It links to practical walkthroughs like the Customer Service Agent and Booking Service Bot, guiding new technical hires through step-by-step implementations of Retrieval-Augmented Generation (RAG) and database integration. This page helps new engineers explore how Arklex components work in context, offering an ideal starting point for learning through applied use cases.",
+            "num": 1
+        },
+        {
+            "source": "https://arklexai.github.io/Agent-First-Organization/docs/tutorials/customer-service",
+            "desc": "This tutorial provides a step-by-step guide to building a customer service agent using the Arklex Agent Framework. It introduces key concepts such as TaskGraph construction, RAG integration, and worker configuration, making it ideal for technical new hires to understand how to create agents from a config file and support real user interactions. Engineers can reference this page to learn how to supply knowledge sources, design workflows, and evaluate agent performance in production-like scenarios.",
+            "num": 1
+        },
+        {
+            "source": "https://arklexai.github.io/Agent-First-Organization/docs/tutorials/booking-service",
+            "desc": "This tutorial walks through building a booking assistant that integrates with real or mock databases using the Arklex DatabaseWorker. It teaches technical hires how to configure agents that can not only answer questions but also read from and write to databases\u2014ideal for use cases like ticket reservations or scheduling. Engineers can use this page to learn how to structure config files for transactional agents and understand the execution flow from user input to database operations.",
+            "num": 1
+        },
+        {
+            "source": "https://arklexai.github.io/Agent-First-Organization/docs/Config/intro",
+            "desc": "This page provides the structure and purpose of the configuration (config) JSON file used to define an agent's behavior, knowledge sources, and components. New technical hires can use it as a reference to understand how to describe agent roles, objectives, documents, workers, and tools\u2014ultimately enabling automated TaskGraph generation. This is a foundational page for learning how to customize and deploy agents efficiently within the Arklex framework.",
+            "num": 1
+        },
+        {
+            "source": "https://arklexai.github.io/Agent-First-Organization/docs/Config/ChatModels",
+            "desc": "This page outlines how to configure and use different LLM providers (OpenAI, Google Gemini, Anthropic, Hugging Face) within the Arklex framework for taskgraph generation and runtime. It provides usage examples, supported model lists, and API key setup instructions. New hires can refer to this page to understand model compatibility, select appropriate LLMs, and troubleshoot model setup when deploying agents with different backends.",
+            "num": 1
+        },
+        {
+            "source": "https://arklexai.github.io/Agent-First-Organization/docs/Taskgraph/intro",
+            "desc": "This page introduces the concept of TaskGraphs in the Arklex framework, explaining how complex agent behaviors are broken into structured nodes (tasks) and edges (execution paths). It helps new hires understand how agents coordinate multi-step workflows across workers and dynamically adapt to user input. Use this page to grasp the core structure and execution flow behind agent orchestration, and how real-world tasks are modeled within the system.",
+            "num": 1
+        },
+        {
+            "source": "https://arklexai.github.io/Agent-First-Organization/docs/Taskgraph/Generation",
+            "desc": "This page details the step-by-step process of converting a config file into an operational TaskGraph, including task decomposition, builder interaction, and worker assignment. New hires can use this page to understand how Arklex agents are programmatically structured, customized through an interactive planner, and mapped to specific workers. It is critical for learning how high-level objectives are translated into executable multi-step agent workflows.",
+            "num": 1
+        },
+        {
+            "source": "https://arklexai.github.io/Agent-First-Organization/docs/MessageState",
+            "desc": "This page defines the MessageState object, a structured representation of the conversation's current context passed between the orchestrator and workers. It outlines critical fields like user input, system instructions, node transitions, and slot-filling metadata. This page is essential for developers building or debugging workers, as it shows how context is carried and modified throughout TaskGraph execution.",
+            "num": 1
+        },
+        {
+            "source": "https://arklexai.github.io/Agent-First-Organization/docs/Workers/intro",
+            "desc": "This page introduces the concept of Workers\u2014the modular execution units in the Arklex Agent First Organization framework responsible for handling tasks and subtasks. It explains how Workers operate using MessageState as input/output and how they can call other Workers recursively. This is a key page for technical hires looking to understand and implement custom task logic or extend the framework's capabilities.",
+            "num": 1
+        },
+        {
+            "source": "https://arklexai.github.io/Agent-First-Organization/docs/Workers",
+            "desc": "This page explains the foundational role of Workers in the Arklex framework. It introduces the BaseWorker class, outlines how Workers execute tasks using MessageState, and describes how they integrate into the TaskGraph as nodes or subgraphs via LangGraph. This page is essential for new hires aiming to develop, extend, or customize Workers to handle specific tasks during agent execution.",
+            "num": 1
+        },
+        {
+            "source": "https://arklexai.github.io/Agent-First-Organization/docs/Workers/MessageWorker",
+            "desc": "This page details the MessageWorker, the foundational component for handling chat responses in Arklex agents. It explains how MessageWorker uses LangGraph and LLMs to generate structured responses from system and user context via MessageState. New hires should reference this to understand the response flow, node structure, and prompt generation logic that powers the agent's conversational outputs.",
+            "num": 1
+        },
+        {
+            "source": "https://arklexai.github.io/Agent-First-Organization/docs/Workers/RAGWorker",
+            "desc": "This page introduces RAGWorker, a key component in enabling Retrieval Augmented Generation for Arklex agents. It explains how the RAGWorker retrieves contextually relevant information using FAISS and composes responses by integrating this data with LLMs. Technical hires should use this page to understand how internal documents are accessed, how the retrieval pipeline is structured via LangGraph nodes, and how context-aware answers are generated dynamically from indexed sources.",
+            "num": 1
+        },
+        {
+            "source": "https://arklexai.github.io/Agent-First-Organization/docs/Workers/DatabaseWorker",
+            "desc": "This page details the implementation of the DatabaseWorker, a specialized component for executing dynamic, database-driven tasks such as searching, booking, and canceling records. Using a sample show booking system, it illustrates how to design and populate relational schemas (e.g., shows, users, bookings) and integrate database operations into the agent flow via slot filling and task-mapped actions. New hires can refer to this guide to understand how to build agents that interact with SQL-based systems and respond based on real-time data.",
+            "num": 1
+        },
+        {
+            "source": "https://arklexai.github.io/Agent-First-Organization/docs/Workers/SearchWorker",
+            "desc": "This page explains the implementation and function of SearchWorker, a component designed to fetch real-time web data using Tavily\u2019s search API. Unlike RAGWorker, which retrieves from local documents, SearchWorker converts user prompts into independent queries and pulls current information from the internet before composing a response. It\u2019s essential for building agents that answer time-sensitive or non-documented questions. Technical hires can use this to understand how to integrate live web search into agent workflows.",
+            "num": 1
+        },
+        {
+            "source": "https://arklexai.github.io/Agent-First-Organization/docs/Workers/DefaultWorker",
+            "desc": "This page describes the DefaultWorker, a fallback worker used when no other worker is matched during TaskGraph generation. It dynamically selects the most appropriate worker at runtime by leveraging an LLM to compare the task description against available workers' capabilities. New engineering hires can learn how the DefaultWorker provides flexibility and resilience by ensuring that every query has a valid execution path, even if no explicit match is found during planning.",
+            "num": 1
+        },
+        {
+            "source": "https://arklexai.github.io/Agent-First-Organization/docs/Tools",
+            "desc": "This page introduces Tools, which are lightweight, flexible task execution units used in Arklex's agent framework. Unlike Workers, Tools operate with simple input/output parameters and are powered by slot-filling for data extraction from conversations. New engineers can use this page to learn how to define, register, and structure custom API functions or utility logic as Tools using the @register_tool decorator. It also explains how to set slot parameters, expected outputs, and completion logic to seamlessly integrate Tools into TaskGraphs.",
+            "num": 1
+        },
+        {
+            "source": "https://arklexai.github.io/Agent-First-Organization/docs/Integration/intro",
+            "desc": "This page introduces integration capabilities within the Arklex Agent Framework, focusing on how agents can be connected to third-party systems like CRMs or external APIs. While currently highlighting HubSpot as a case study, the page sets the foundation for teaching new technical hires how to wire tools and workers into real business ecosystems. It demonstrates how to extend agent functionality beyond internal logic by embedding API-based services and provides an entry point for building custom integrations.",
+            "num": 1
+        },
+        {
+            "source": "https://arklexai.github.io/Agent-First-Organization/docs/Integration/Hubspot",
+            "desc": "This page details how to integrate HubSpot with the Arklex Agent Framework to enable CRM-based functionality like user identification, ticket creation, and meeting scheduling. It guides new technical hires through authenticating with the HubSpot API, configuring access scopes, and implementing tools that allow agents to retrieve contact data, log conversations, create tickets, and manage meeting availability. This resource is crucial for onboarding engineers tasked with building agents that interact with real customer data or handle enterprise workflows.",
+            "num": 1
+        },
+        {
+            "source": "https://arklexai.github.io/Agent-First-Organization/docs/Evaluation/intro",
+            "desc": "This page introduces the evaluation pipeline for task-oriented dialogue agents built with the Arklex framework. It walks technical hires through generating synthetic conversations, launching a local model API, and analyzing goal completion using configurable parameters like task count and max turns. This page is essential for validating agent performance, extracting metrics, and ensuring that new agents align with user objectives and expected behavior before deployment.",
+            "num": 1
+        },
+        {
+            "source": "https://arklexai.github.io/Agent-First-Organization/docs/Evaluation/UserSimulator",
+            "desc": "This page explains how to simulate user interactions for evaluating agent performance using a two-pass testing framework. It guides engineers through configuring parameters such as number of conversations, goals, and turn limits to assess goal completion and NLU accuracy. Useful for stress-testing bots under various scenarios and validating how well an agent satisfies user and builder objectives based on the config or TaskGraph.",
+            "num": 1
+        },
+        {
+            "source": "https://arklexai.github.io/Agent-First-Organization/docs/Evaluation/Metrics",
+            "desc": "This page outlines the evaluation metrics used to measure chatbot performance after simulation. It details three key indicators: user's goal completion rate (success rate), user's goal completion efficiency (average turns taken), and bot's goal completion rate (builder-defined success). Helps technical hires interpret simulation results and understand trade-offs between success and efficiency when optimizing TaskGraph flows or tuning agent behaviors.",
+            "num": 1
+        }
+    ],
+    "tasks": [
+        "Answer general questions about Arklex AI and its mission",
+        "Guide the user through setting up their development environment",
+        "Provide documentation explanations and links about Tutorials, Config, TaskGraph, Workers, MessageState, Tools, Integration, and Evaluation",
+        "Introduce the engineering team members and their roles",
+        "Help the user find answers using RAG on company docs and FAQs",
+        "Search online for external documentation using Tavily when asking about specific components, tools, or technologies that require more in depth explanations",
+        "Escalate to human support if the question is too technical or ambiguous"
+    ],
+    "workers": [
+        {
+            "id": "9aa47724-0b77-4752-9528-cf4b06a46915",
+            "name": "FaissRAGWorker",
+            "path": "faiss_rag_worker.py"
+        },
+        {
+            "id": "26bb6634-3bee-417d-ad75-23269ac17bc3",
+            "name": "MessageWorker",
+            "path": "message_worker.py"
+        },
+        {
+            "id": "9c15af81-04b3-443e-be04-a3522124b905",
+            "name": "SearchWorker",
+            "path": "search_worker.py"
+        },
+        {
+            "id": "b06c2b58-12c5-41fe-9838-e93b530e42e8",
+            "name": "DefaultWorker",
+            "path": "default_worker.py"
+        }
+    ],
+    "tools": [],
+    "nluapi": "",
+    "slotfillapi": ""
+}
